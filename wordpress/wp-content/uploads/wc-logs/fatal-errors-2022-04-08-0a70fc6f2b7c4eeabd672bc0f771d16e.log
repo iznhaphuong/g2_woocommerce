@@ -1,0 +1,32 @@
+2022-04-08T01:40:58+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 16
+
+2022-04-08T01:40:59+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 16
+
+2022-04-08T01:43:02+00:00 CRITICAL syntax error, unexpected token "{", expecting "(" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 4
+
+2022-04-08T01:43:16+00:00 CRITICAL syntax error, unexpected variable "$the_query" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 10
+
+2022-04-08T01:43:24+00:00 CRITICAL syntax error, unexpected variable "$the_query" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 10
+
+2022-04-08T01:43:35+00:00 CRITICAL syntax error, unexpected variable "$the_query" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 10
+
+2022-04-08T01:44:05+00:00 CRITICAL syntax error, unexpected variable "$the_query" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 10
+
+2022-04-08T01:56:21+00:00 CRITICAL syntax error, unexpected token "=>" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 5
+
+2022-04-08T01:56:30+00:00 CRITICAL syntax error, unexpected token "=>" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 5
+
+2022-04-08T01:59:26+00:00 CRITICAL syntax error, unexpected variable "$wp_query" in /Applications/MAMP/htdocs/wordpress/wp-content/themes/mytheme/index.php on line 13
+

@@ -8,7 +8,7 @@
     <!--container-->
     <div id="container">
   <header id="header">
-    <!-- logo -->
+    <!-- logo: hello -->
    <?php mytheme_logo(); ?>
    <!-- menu -->
    <?php mytheme_menu('my-custom-menu' ); ?>

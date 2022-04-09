@@ -31,12 +31,14 @@ if ( ! function_exists( 'mytheme_menu' ) ) {
      $menu = array(
        'theme_location' => $slug,
        'container' => 'nav',
-       'container_class' => $slug,
+       'container_class' => "wrap",
 );
      wp_nav_menu( $menu );
    }
 }
 
+
+//CSS
 function my_styles(){
     //tra ve duong da de file style.css
     wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
@@ -50,4 +52,4 @@ function nav_add_custom_menu(){
     register_nav_menu('my-custom-menu',__('My Custom Menu'));
 }
 
-// add_action('init', 'nav_add_custom_menu');
+add_action('init', 'nav_add_custom_menu');

@@ -1,3 +1,4 @@
-body{
-    color:purple;
+* {
+    color: red;
+    background: black;
 }
