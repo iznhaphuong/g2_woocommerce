@@ -1,4 +1,24 @@
-* {
+/* * {
     color: red;
     background: black;
+} */
+
+nav.menu li {
+    list-style-type: none;
+    list-style: none;
+    list-style-image: none;
+    text-align:right;
+    margin: 0px 10px;
+}
+nav.menu ul {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    background: teal;
+} 
+ 
+nav.menu a { 
+    text-decoration: none;
+    color: white;
+
 }

@@ -11,5 +11,10 @@
     <!-- logo: hello -->
    <?php mytheme_logo(); ?>
    <!-- menu -->
-   <?php mytheme_menu('my-custom-menu' ); ?>
+   <?php 
+  //  echo '<div style="display: flex;flex-direction: row;>';
+   mytheme_menu('my-custom-menu'); 
+  //  echo '</div>';
+
+   ?>
   </header>
