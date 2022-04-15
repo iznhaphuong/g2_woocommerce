@@ -43,7 +43,13 @@ function my_styles(){
     
     wp_enqueue_style( 'main-style' );
 }
-// add_action('wp_enqueue_scripts', 'my_styles');
+ add_action('wp_enqueue_scripts', 'my_styles');
+
+function add_favicon() {
+    echo '<link rel="shortcut icon" type="image/png" href="'.get_template_directory_uri().'/public/images/favicon.jpeg" />';
+}
+
+add_action('wp_head', 'add_favicon');
 
 
 function nav_add_custom_menu(){
