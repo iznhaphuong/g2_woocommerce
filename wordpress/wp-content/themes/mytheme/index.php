@@ -27,9 +27,22 @@ if($the_query->have_posts()):
         //get_the_author->return. the_author: in truc tiep
         echo get_the_author();
         echo the_date();
+        echo '<a href="'.get_permalink( get_the_ID() ).'">'.get_the_title().'</a>';
         echo the_content('<br><hr>');
 endwhile;
 echo '</div>';
 endif;
+
+
+	// Load posts loop.
+	while ( have_posts() ) {
+		the_post();
+
+		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
+	}
+
+	// Previous/next page navigation.
+	// twenty_twenty_one_the_posts_navigation();
+
 
 get_footer();
