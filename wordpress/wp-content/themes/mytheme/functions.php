@@ -42,6 +42,10 @@ function my_styles(){
     wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
     
     wp_enqueue_style( 'main-style' );
+
+    wp_register_style('archive-style', get_template_directory_uri() . '/style_archive.css', 'all');
+    
+    wp_enqueue_style( 'archive-style' );
 }
  add_action('wp_enqueue_scripts', 'my_styles');
 
