@@ -1,48 +1,87 @@
 <?php 
 get_header();
-get_sidebar();
+
 $args = array (
     'post_type'=>'post', //loai la post
     // 'orderby' => 'rand', //lay ngau nhien
-    'posts_per_page' => 5 //lay 5 bai cho 1 trang
+    'posts_per_page' => 3 //lay 5 bai cho 1 trang
 );
 
 $the_query = new WP_Query($args);
+?>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-10 col-sm-12">
+            <h3>Bài Viết</h3>
+            <?php
+            if($the_query->have_posts()):
+                echo '<div class="d-flex">';
+                while($the_query->have_posts()):
+                    $the_query->the_post();
+            ?>
+            <a href="<?= get_permalink( get_the_ID() )?>">
 
-// $wp_query->$posts lay ra nhieu bai viet
-// $wp_query->$post lay ta bai viet moi nhat
-// if($wp_query->have_posts()){         kiem tra co ton tai post
-//     while($wp_query->have_posts()){
-//         //call the next post
-//         $wp_query->the_post();
-//         echo $post->post_title. '<br>';
-//     }
-// }
+                <div class="blog-card spring-fever me-3 mb-3">
 
-if($the_query->have_posts()):
-    echo '<div style = "background: pink">';
-    while($the_query->have_posts()):
-        $the_query->the_post();
-        echo the_title('<h4>','</h4>');
-        //get_the_author->return. the_author: in truc tiep
-        echo get_the_author();
-        echo the_date();
-        echo '<a href="'.get_permalink( get_the_ID() ).'">'.get_the_title().'</a>';
-        echo the_content('<br><hr>');
-endwhile;
-echo '</div>';
-endif;
+                    <div class="title-content">
+                        <h3 class="text-capitalize"><?php the_title();?></h3>
+                        <hr />
+                        <div class="intro d-flex justify-content-between">
+                            <div class="d-flex">
+                                <?php echo get_avatar( get_the_author_meta( 'ID' )); ?>
+                                <p class="ps-3"><?php the_author();?></p>
+                            </div>
+                            <p><?php echo getPostViews(get_the_ID());  ?> <i class="fa fa-eye"> </i></p>
+                        </div>
+                    </div><!-- /.title-content -->
+                    <div class="card-info">
+                        <?php the_content();?>
+                    </div><!-- /.card-info -->
+                    <div class="utility-info">
+                        <ul class="utility-list d-flex justify-content-end">
+                            <li class="comments">12</li>
+                            <li class="date"><?php the_date('d.m.Y') ?></li>
+                        </ul>
+                    </div><!-- /.utility-info -->
+                    <!-- overlays -->
+                    <div class="gradient-overlay"></div>
+                    <div class="color-overlay"></div>
+                </div><!-- /.blog-card -->
+            </a>
+            <?php
+            endwhile;
+            echo '</div>';
+            endif;
+
+            ?>
+
+        </div>
+        <div class="col-md-2 col-sm-12">
+            <h3>Danh mục</h3>
+            <div class="categories">
+            <?php
+            $args = array(
+            'orderby' => 'name',
+            'order' => 'ASC'
+            );
+            
+            $categories = get_categories($args);
+            foreach($categories as $category) { 
+                echo '<div class="category d-flex">';
+                echo '<a class="cat-name" href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
+                echo '<p class="postpercat px-2">'. $category->count . '</p>';
+                echo '</div>';
+                echo '<hr>';
+            }
+            ?>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
-	// Load posts loop.
-	while ( have_posts() ) {
-		the_post();
 
-		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
-	}
-
-	// Previous/next page navigation.
-	// twenty_twenty_one_the_posts_navigation();
-
+<?php
 
 get_footer();
