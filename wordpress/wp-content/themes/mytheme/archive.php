@@ -55,7 +55,7 @@
             <!-- end PAGINATION -->
         </main>
         <!-- end MAIN -->
-        <?php //get_sidebar(); ?>
+        <?php get_sidebar(); ?>
     </div>
     <!-- end CONTENTS AREA -->
 <?php //get_footer(); ?>
