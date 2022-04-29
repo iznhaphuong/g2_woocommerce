@@ -1,20 +1,107 @@
 <?php
-//Thêm search box 
-// add_filter( 'wp_nav_menu_items','add_search_box', 
-// 10, 2 );
-// function add_search_box( $items, $args ) {
-// $items .= '<li>' . get_search_form( false ) . 
-// '</li>';
-// return $items;
-// }
+/**
+ * Tính số lượt xem
+ * 
+ */
 
-//Hiển thị admin bar
+//Hàm lấy lượt xem
+function getPostViews($postID){
+  $count_key = 'post_views_count';
+  $count = get_post_meta($postID, $count_key, true);
+  if($count==''){
+  delete_post_meta($postID, $count_key);
+  add_post_meta($postID, $count_key, '0');
+  return 1;
+  }
+  return $count;
+  }
+  // Hàm đếm lượt xem
+  function setPostViews($postID) {
+  $count_key = 'post_views_count';
+  $count = get_post_meta($postID, $count_key, true);
+  if($count==''){
+  $count = 0;
+  delete_post_meta($postID, $count_key);
+  add_post_meta($postID, $count_key, '0');
+  }else{
+  $count++;
+  update_post_meta($postID, $count_key, $count);
+  }
+  }
+  //Code hiển thị lượt view trong dashboard
+  add_filter('manage_posts_columns', 'posts_column_views');
+  add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+  function posts_column_views($defaults){
+  $defaults['post_views'] = __('Views');
+  return $defaults;
+  }
+  function posts_custom_column_views($column_name, $id){
+  if($column_name === 'post_views'){
+  echo getPostViews(get_the_ID());
+  }
+  }
+
+//Dòng này để chắc chắc WordPress sẽ đếm chính xác hơn
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+function wpb_get_post_views($postID){
+  $count_key = 'wpb_post_views_count';
+  $count = get_post_meta($postID, $count_key, true);
+  if($count==''){
+      delete_post_meta($postID, $count_key);
+      add_post_meta($postID, $count_key, '0');
+      return 0;
+  }
+  return $count;
+}
+
+
+/**
+ * Thêm search form vào menu
+ */
+add_filter( 'wp_nav_menu_items','add_search_box',10, 2 );
+function add_search_box( $items, $args ) {
+$items .= '<li>' . get_search_form( false ) . 
+'</li>';
+return $items;
+}
+
+
+//Search form custom
+function wpbsearchform( $form ) {
+   
+  $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+
+  <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+  <div class="input-group">
+    <div class="input-group-prepend" id="searchsubmit">
+      <button id="button-addon2" type="submit" class="btn btn-link text-warning"><i class="fa fa-search"></i></button>
+    </div>
+    <input type="search"  value="'. esc_attr( get_search_query() ) .'" name="s" id="s" placeholder="Search" aria-describedby="button-addon2" class="form-control border-0 bg-light">
+  </div>
+</div>
+</div>
+
+  </form>';
+ 
+  return $form;
+}
+//Cập nhật search form
+add_filter( 'get_search_form', 'wpbsearchform', 40 );
+
+
+
+/**
+ * Hiển thị admin bar
+ */
 add_filter( 'show_admin_bar', '__return_true');
+
+
 
 /**
 *@ Thiết lập hàm hiển thị menu
 *@ mytheme_menu( $slug )
-**/
+*/
 if ( ! function_exists( 'mytheme_menu' ) ) {
    function mytheme_menu( $slug ) {
      $menu = array(
@@ -25,6 +112,9 @@ if ( ! function_exists( 'mytheme_menu' ) ) {
      wp_nav_menu( $menu );
    }
 }
+
+
+
 /**
  * Đăng kí menu
  */
@@ -45,7 +135,9 @@ function my_styles(){
     wp_enqueue_style( 'main-style' );
 }
 add_action('wp_enqueue_scripts', 'my_styles');
+
 ?>
+
 
 
 <?php 
@@ -56,8 +148,8 @@ add_action('wp_enqueue_scripts', 'my_styles');
 
 if ( ! function_exists( 'mytheme_logo' ) ) {
    function mytheme_logo() {?>
-<div class="logo pt-5">
-        <?php
+<div class="logo2 pt-5">
+    <?php
            printf(
              //truyền các tham số lần lượt url, title, logo, description
              '
@@ -66,7 +158,7 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
              ',
              get_bloginfo( 'url' ),
              get_bloginfo( 'sitename' ),
-             esc_url( get_stylesheet_directory_uri() ) . '/images/logo.png ',
+             esc_url( get_stylesheet_directory_uri() ) . '/images/logo2.png ',
              get_bloginfo( 'description' )
            );
          }  ?>

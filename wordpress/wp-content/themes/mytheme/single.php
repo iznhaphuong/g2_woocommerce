@@ -1,4 +1,5 @@
 <?php 
+setPostViews(get_the_ID());
 get_header();
 get_sidebar();
 $args = array (
