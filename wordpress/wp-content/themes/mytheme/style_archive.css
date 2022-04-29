@@ -436,6 +436,10 @@ img {
 @media screen and (min-width: 992px) {
     .c-hentry-content .entry-meta {
         font-size: 14px; } }
+.entry-date {
+    display: block;
+    margin-bottom: 8px;
+}
 .c-hentry-content .entry-meta .entry-date {
     line-height: 1;
     margin-right: 10px; }

@@ -57,7 +57,7 @@ $the_query = new WP_Query($args);
 
         </div>
         <div class="col-md-2 col-sm-12">
-            <?php get_sidebar(); ?>
+            <?php get_sidebar() ?>
         </div>
     </div>
 
