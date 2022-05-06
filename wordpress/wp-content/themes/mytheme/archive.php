@@ -13,6 +13,7 @@
                         <!-- start ENTRY -->
                             <div class="col-md-6 col-sm-12">
                                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'c-hentry' ); ?>>
+                                    <!-- Thumbnail -->
                                     <figure class="c-hentry-thumbnail">
                                         <a href="<?php the_permalink(); ?>">
                                             <?php if ( has_post_thumbnail() ) : ?>
@@ -25,21 +26,26 @@
                                     </figure>
                                     <div class="c-hentry-content">
                                         <header class="entry-header">
+                                            <!-- Title -->
                                             <h2 class="entry-title">
                                                 <a href="<?php the_permalink(); ?>">
                                                     <?php the_title(); ?>
                                                 </a>
                                             </h2>
                                             <div class="entry-meta">
+                                                <!-- Time -->
                                                 <time class="entry-date published"><?php the_time( get_option( 'date_format' ) ); ?></time>
+                                                <!-- Category -->
                                                 <span class="category-links">
                                                     <?php the_category( '&nbsp;' ); ?>
                                                 </span>
+                                                <!-- Tag -->
                                                 <span class="tag-links">
                                                     <?php the_tags( '', '', '' ); ?>
                                                 </span>
                                             </div>
                                         </header>
+                                        <!-- Content -->
                                         <div class="entry-excerpt">
                                             <?php the_excerpt(); ?>
                                         </div>
@@ -50,13 +56,13 @@
                         <?php endwhile; ?>
                     </div>
                 <?php else : ?>
-                    <?php echo "データが入っていません。"; ?>
+                    <?php echo "Không có dữ liệu."; ?>
                 <?php endif; ?>
 
                 <?php the_posts_pagination(
                     array(
-                        'prev_text' => '前ページへ',
-                        'next_text' => '次ページへ'
+                        'prev_text' => 'Đến trang trước',
+                        'next_text' => 'Sang trang tiếp theo'
                     )
                 ); ?>
                 <!-- end PAGINATION -->
