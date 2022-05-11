@@ -1,5 +1,68 @@
 <?php
 /**
+ * Get sale flash
+ */
+function getSalePercent( $product_id ) {
+  $product = wc_get_product($product_id);
+  $sale_percent = 0;
+  if ( $product->is_type( 'simple' ) || $product->is_type( 'external' ) ) {
+      $regular_price  = $product->get_regular_price();
+      $sale_price     = $product->get_sale_price();
+      $sale_percent = round( ( ( floatval( $regular_price ) - floatval( $sale_price ) ) / floatval( $regular_price ) ) * 100 );
+  } 
+  return percentage_format( $sale_percent );
+}
+
+
+//Định dạng kết quả dạng -{value}%. Ví dụ -20%
+function percentage_format( $value ) {
+    return str_replace( '{value}', $value, '-{value}%' );
+}
+ 
+
+/**
+ * Lấy sản phẩm mới nhất
+ */
+function getLatestProducts($args){
+  return $latestProduct = wc_get_products(array(
+    'post_type'=>'product', 
+    'post_status'=>'publish',
+    'orderby' => 'ID',
+    'order' => 'DESC',
+    'posts_per_page'=> $args));
+}
+
+/**
+ * Lấy sản phẩm đang giảm giá
+ */
+function getSaleProducts ($args) {
+  return new WP_Query(array (
+    'post_type'=>'product', 
+    'post_status'=>'publish',
+    'orderby' => 'ID',
+    'order' => 'DESC',
+    'posts_per_page'=> 10, 
+	  'meta_query'     => array(
+        'relation' => 'OR',
+        array(
+            'key'           => '_sale_price',
+            'value'         => 0,
+            'compare'       => '>',
+            'type'          => 'numeric'
+        ),
+        //xử lý đối với variable product
+        array(
+	        'key'           => '_min_variation_sale_price',
+	        'value'         => 0,
+	        'compare'       => '>',
+	        'type'          => 'numeric'
+	    )
+    )
+  )); 
+}
+
+
+/**
  * Tính số lượt xem
  * 
  */
@@ -81,8 +144,7 @@ function wpbsearchform( $form ) {
   </div>
 </div>
 </div>
-
-  </form>';
+</form>';
  
   return $form;
 }
@@ -152,18 +214,16 @@ add_action('wp_enqueue_scripts', 'my_styles');
 
 if ( ! function_exists( 'mytheme_logo' ) ) {
    function mytheme_logo() {?>
-<div class="logo2 pt-5">
+<div class="logo2 py-5">
     <?php
            printf(
              //truyền các tham số lần lượt url, title, logo, description
              '
              <a href="%s" title="%s"><img class="img-fluid mx-auto" id="img-logo" src="%s"></a>
-             <h5>%s</h5>
              ',
              get_bloginfo( 'url' ),
              get_bloginfo( 'sitename' ),
              esc_url( get_stylesheet_directory_uri() ) . '/images/logo2.png ',
-             get_bloginfo( 'description' )
            );
          }  ?>
 </div>
