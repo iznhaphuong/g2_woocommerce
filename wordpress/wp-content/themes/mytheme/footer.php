@@ -1,6 +1,6 @@
 </div>
    <!--end container -->
-   <footer>
+   <footer class="mt-100">
        <div class="copyright">
            &copy;<?php echo date('Y')?> - <?php bloginfo('sitename') ?>
        </div>
