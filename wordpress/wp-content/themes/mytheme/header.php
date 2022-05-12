@@ -22,6 +22,25 @@
 
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+    .gradient-custom {
+        /* fallback for old browsers */
+        background: #5ee7df;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5));
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5))
+    }
+    .title-cart {
+        transform: translateY(50%)!important;
+    }
+    .start-0-fix {
+        left: 12px;
+    }
+    .btn-fix {
+        margin-left: 5%;
+    }
     </style>
 </head>
 
