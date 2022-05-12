@@ -20,7 +20,7 @@
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define( 'DB_NAME', 'wordpress' );
+define( 'DB_NAME', 'wordpress2' );
 
 /** Username của database */
 define( 'DB_USER', 'root' );
@@ -48,14 +48,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '-ratJwLL~y;bPG|yer _2v)My_p7 qQAesU*yznsyabAtjiMq1WTsz~PKSEbC2$m' );
-define( 'SECURE_AUTH_KEY',  'jj<1T+H{J5G9iNk?ZN<`LLU!>EC}Dg[j&>>a!UngIu?u7>Zy-U4f_H<RO=C3&G5<' );
-define( 'LOGGED_IN_KEY',    'OrMUL>1ceWT:`)ZH+wT}@7B];[;}=-^f~wK5^j<.UTR7Q~f}3m=:~8zsvB{OVLiq' );
-define( 'NONCE_KEY',        'wdmG5gD!o0DG## _>;*#=}5@-%Kmw_V(Oj.9xf2MEi%8p_F=PD3rP&$nBn A:&,9' );
-define( 'AUTH_SALT',        '<t5EC~oY00%5<M=gR%-Cfq<2nvz9z7ly;`F1fj01I&+]XkHD1_R)a7kB3J=NxcTN' );
-define( 'SECURE_AUTH_SALT', '.$K>hDGnAfCTHrFTZfV)Y8Uog_}sXO.!O}HTVBF+:xh5b8~JbhAS?Z@zNg&~anO7' );
-define( 'LOGGED_IN_SALT',   'ccQNvY*K}P;ws68:s4C8AWI<4OU47|y> HWcD[M1L_pEJaD*?MTHARCxO]bH7imA' );
-define( 'NONCE_SALT',       '3`NA{XJ^aFm~+lE`/{OU|>4q;]2#lUupW1hnW}]f@Ww?~<8bbKac3u[31sfWT@v+' );
+define( 'AUTH_KEY',         '$mL,OjByU`8jil?-Z&Bgvc``I#2YSp|Qv%2~YfRYO![|*/Cr1HT(*tI@B`+TJ)hf' );
+define( 'SECURE_AUTH_KEY',  'GCOS]A7.>)@LRQ+Kp]_#U.}E)D0#QBMQlNnNR30]<fGAb|=8<?,_3DHk~Y(L]{e_' );
+define( 'LOGGED_IN_KEY',    '?lKL&1oAfzMUT.P;mpi|u;xM[:8IPFwc]Kbl~/=||$+,5`6/M%Iar19s`wmNcd+c' );
+define( 'NONCE_KEY',        ']ysA0|PZiZ,8sp7C$lLRYvebXH$laH~~7o4o|[0xa porZhWKs|DacYVgd g6]yL' );
+define( 'AUTH_SALT',        '+u15W?a%W|wTnBsDs9nviR-CL781zV|AL/bIZsMnfNK!i*1eF#kFiB.DU:tz([,.' );
+define( 'SECURE_AUTH_SALT', '-,;Z#Uk0#L gZZzeEj#2Gx_HlRO4j{BLW#;{=2s$FFGF}RIDQ?!?!: PeKv#XO,|' );
+define( 'LOGGED_IN_SALT',   '~{qMp4v]:BHE5,e:<_)xf2JMJDLq;Nb;SB9`AoH?WE5s)W%dJ?)W]!t<1;G.E`[k' );
+define( 'NONCE_SALT',       'arPbl1hCCJQgQ|45+PidMD]nz-k/cL4>$n0^*VP(0oAFU $`x6H]:`J[ rZtV~Rp' );
 
 /**#@-*/
 
