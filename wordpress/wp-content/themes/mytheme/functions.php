@@ -1,6 +1,44 @@
 <?php
+
 /**
- * Get sale flash
+ * Lấy sản phẩm theo danh mục
+ */
+function getSearchResult($s)
+{
+  return wc_get_products(array(
+    'post_type'=>'product', 
+    'post_status'=>'publish',
+    's' => $s 
+  ));
+}
+
+/**
+ * Lấy tất cả danh mục sản phẩm
+ */
+function getAllCategories(){
+  $taxonomy     = 'product_cat';
+  $orderby      = 'name';  
+  $show_count   = 0;      // 1 for yes, 0 for no
+  $pad_counts   = 0;      // 1 for yes, 0 for no
+  $hierarchical = 1;      // 1 for yes, 0 for no  
+  $title        = '';  
+  $empty        = 0;
+  $args = array(
+      'taxonomy'     => $taxonomy,
+      'orderby'      => $orderby,
+      'show_count'   => $show_count,
+      'pad_counts'   => $pad_counts,
+      'hierarchical' => $hierarchical,
+      'title_li'     => $title,
+      'hide_empty'   => $empty
+  );
+  return get_categories($args);
+}
+?>
+
+<?php
+/**
+ * Get sale %
  */
 function getSalePercent( $product_id ) {
   $product = wc_get_product($product_id);
@@ -10,15 +48,26 @@ function getSalePercent( $product_id ) {
       $sale_price     = $product->get_sale_price();
       $sale_percent = round( ( ( floatval( $regular_price ) - floatval( $sale_price ) ) / floatval( $regular_price ) ) * 100 );
   } 
-  return percentage_format( $sale_percent );
+  // return percentage_format( $sale_percent );
+  return str_replace( '{sale_percent}', $sale_percent, '-{sale_percent}%' );
+
+}
+//
+add_filter('woocommerce_sale_flash', 'my_woocommerce_sale_flash', 10, 3);
+function my_woocommerce_sale_flash($html, $post, $product_id){
+    return '<span class="onsale">'. getSalePercent($product_id) . '</span>';
+}
+/**
+ * Lấy sản phẩm mới nhất
+ */
+function getRandProducts($args){
+  return $latestProduct = wc_get_products(array(
+    'post_type'=>'product', 
+    'post_status'=>'publish',
+    'orderby' => 'rand', //lay ngau nhien
+    'posts_per_page'=> $args));
 }
 
-
-//Định dạng kết quả dạng -{value}%. Ví dụ -20%
-function percentage_format( $value ) {
-    return str_replace( '{value}', $value, '-{value}%' );
-}
- 
 
 /**
  * Lấy sản phẩm mới nhất
@@ -61,7 +110,6 @@ function getSaleProducts ($args) {
   )); 
 }
 
-
 /**
  * Tính số lượt xem
  * 
@@ -89,7 +137,7 @@ function getPostViews($postID){
   }else{
   $count++;
   update_post_meta($postID, $count_key, $count);
-  }
+    }
   }
   //Code hiển thị lượt view trong dashboard
   add_filter('manage_posts_columns', 'posts_column_views');
@@ -122,7 +170,7 @@ function wpb_get_post_views($postID){
 /**
  * Thêm search form vào menu
  */
-add_filter( 'wp_nav_menu_items','add_search_box',10, 2 );
+// add_filter( 'wp_nav_menu_items','add_search_box',10, 2 );
 function add_search_box( $items, $args ) {
 $items .= '<li>' . get_search_form( false ) . 
 '</li>';
@@ -132,24 +180,22 @@ return $items;
 
 //Search form custom
 function wpbsearchform( $form ) {
-   
-  $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
 
-  <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+  $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+<div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
   <div class="input-group">
     <div class="input-group-prepend" id="searchsubmit">
-      <button id="button-addon2" type="submit" class="btn btn-link text-warning"><i class="fa fa-search"></i></button>
+      <button id="button-addon2" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
     </div>
-    <input type="search"  value="'. esc_attr( get_search_query() ) .'" name="s" id="s" placeholder="Search" aria-describedby="button-addon2" class="form-control border-0 bg-light">
+    <input type="search"  value="'. esc_attr( get_search_query() ) .'" name="s" id="s" placeholder="Search" aria-describedby="button-addon2" class="form-control border-0 bg-light required">
   </div>
 </div>
-</div>
 </form>';
- 
+
   return $form;
 }
 //Cập nhật search form
-add_filter( 'get_search_form', 'wpbsearchform', 40 );
+add_filter( 'get_search_form', 'wpbsearchform', 10 );
 
 
 
@@ -157,8 +203,6 @@ add_filter( 'get_search_form', 'wpbsearchform', 40 );
  * Hiển thị admin bar
  */
 add_filter( 'show_admin_bar', '__return_true');
-
-
 
 /**
 *@ Thiết lập hàm hiển thị menu
@@ -177,14 +221,25 @@ if ( ! function_exists( 'mytheme_menu' ) ) {
 
 
 
+
+
+
 /**
  * Đăng kí menu
  */
 function nav_add_custom_menu(){
   register_nav_menu('my-custom-menu',__('My Custom Menu'));
+  register_nav_menus(
+    array(
+      'primary' => esc_html__( 'Primary menu', 'twentytwentyone' ),
+      'footer'  => esc_html__( 'Secondary menu', 'twentytwentyone' ),
+    )
+  );
 }
 
 add_action('init', 'nav_add_custom_menu');
+
+
 
 
 /**
@@ -193,17 +248,11 @@ add_action('init', 'nav_add_custom_menu');
 function my_styles(){
     //tra ve duong da de file style.css
     wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
-    
     wp_enqueue_style( 'main-style' );
-
-    wp_register_style('archive-style', get_template_directory_uri() . '/style_archive.css', 'all');
-    
-    wp_enqueue_style( 'archive-style' );
 }
 add_action('wp_enqueue_scripts', 'my_styles');
 
 ?>
-
 
 
 <?php 
@@ -214,17 +263,18 @@ add_action('wp_enqueue_scripts', 'my_styles');
 
 if ( ! function_exists( 'mytheme_logo' ) ) {
    function mytheme_logo() {?>
-<div class="logo2 py-5">
+<div class="logo2">
     <?php
            printf(
              //truyền các tham số lần lượt url, title, logo, description
              '
-             <a href="%s" title="%s"><img class="img-fluid mx-auto" id="img-logo" src="%s"></a>
+             <a href="%s" title="%s"><img class="img-fluid mx-auto py-5" id="img-logo" src="%s"></a>
              ',
              get_bloginfo( 'url' ),
              get_bloginfo( 'sitename' ),
              esc_url( get_stylesheet_directory_uri() ) . '/images/logo2.png ',
-           );
-         }  ?>
+           );?>
 </div>
-<?php } ?>
+
+<?php }  ?>
+<?php } 
