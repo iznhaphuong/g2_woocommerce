@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
  */
 class DataRegenerator {
 
-	public const PRODUCTS_PER_GENERATION_STEP = 10;
+	const PRODUCTS_PER_GENERATION_STEP = 10;
 
 	/**
 	 * The data store to use.

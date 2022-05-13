@@ -5,8 +5,7 @@ import classnames from 'classnames';
 import { fields } from '@woocommerce/icons';
 import { Icon } from '@wordpress/icons';
 import { registerFeaturePluginBlockType } from '@woocommerce/block-settings';
-import { createBlock } from '@wordpress/blocks';
-import type { BlockInstance } from '@wordpress/blocks';
+import { BlockInstance, createBlock } from '@wordpress/blocks';
 
 /**
  * Internal dependencies

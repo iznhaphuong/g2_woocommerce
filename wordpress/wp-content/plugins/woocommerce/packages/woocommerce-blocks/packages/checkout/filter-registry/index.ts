@@ -5,8 +5,7 @@ import { useMemo, useRef } from '@wordpress/element';
 import { __, sprintf } from '@wordpress/i18n';
 import { CURRENT_USER_IS_ADMIN } from '@woocommerce/settings';
 import deprecated from '@wordpress/deprecated';
-import isShallowEqual from '@wordpress/is-shallow-equal';
-import type { ComparableObject } from '@wordpress/is-shallow-equal';
+import isShallowEqual, { ComparableObject } from '@wordpress/is-shallow-equal';
 import { isNull, isObject, objectHasProp } from '@woocommerce/types';
 
 /**
@@ -77,7 +76,7 @@ export const __experimentalRegisterCheckoutFilters = (
 /**
  * Get all filters with a specific name.
  *
- * @param {string} filterName Name of the filter to search for.
+ * @param {string} filterName   Name of the filter to search for.
  * @return {Function[]} Array of functions that are registered for that filter
  *                      name.
  */
@@ -94,20 +93,17 @@ const cachedFilterRuns: Record<
 	{
 		arg?: CheckoutFilterArguments;
 		extensions?: Record< string, unknown > | null;
-		defaultValue: unknown;
 	} & Record< string, unknown >
 > = {};
 
-const updatePreviousFilterRun = < T >(
+const updatePreviousFilterRun = (
 	filterName: string,
 	arg: CheckoutFilterArguments,
-	extensions: Record< string, unknown > | null,
-	defaultValue: T
+	extensions: Record< string, unknown > | null
 ): void => {
 	cachedFilterRuns[ filterName ] = {
 		arg,
 		extensions,
-		defaultValue,
 	};
 };
 
@@ -147,36 +143,27 @@ const checkMembersShallowEqual = <
  * If they are shallowly equal, then return the cached value and prevent third party code running. If they are
  * different then the third party filters are run and the result is cached.
  */
-const shouldReRunFilters = < T >(
+const shouldReRunFilters = (
 	filterName: string,
 	arg: CheckoutFilterArguments,
-	extensions: Record< string, unknown > | null,
-	defaultValue: T
+	extensions: Record< string, unknown > | null
 ): boolean => {
 	const previousFilterRun = cachedFilterRuns[ filterName ];
 
 	if ( ! previousFilterRun ) {
 		// This is the first time the filter is running so let it continue;
-		updatePreviousFilterRun( filterName, arg, extensions, defaultValue );
+		updatePreviousFilterRun( filterName, arg, extensions );
 		return true;
 	}
 	const {
 		arg: previousArg = {} as Record< string, unknown >,
 		extensions: previousExtensions = {} as Record< string, unknown >,
-		defaultValue: previousDefaultValue = null,
 	} = previousFilterRun;
 
 	// Check length of arg and previousArg, and that all keys are present in both arg and previousArg
 	const argIsEqual = checkMembersShallowEqual( arg, previousArg );
 	if ( ! argIsEqual ) {
-		updatePreviousFilterRun( filterName, arg, extensions, defaultValue );
-		return true;
-	}
-
-	// Check length of arg and previousArg, and that all keys are present in both arg and previousArg
-	const defaultValueIsEqual = defaultValue === previousDefaultValue;
-	if ( ! defaultValueIsEqual ) {
-		updatePreviousFilterRun( filterName, arg, extensions, defaultValue );
+		updatePreviousFilterRun( filterName, arg, extensions );
 		return true;
 	}
 
@@ -185,7 +172,7 @@ const shouldReRunFilters = < T >(
 		previousExtensions
 	);
 	if ( ! extensionsIsEqual ) {
-		updatePreviousFilterRun( filterName, arg, extensions, defaultValue );
+		updatePreviousFilterRun( filterName, arg, extensions );
 		return true;
 	}
 	return false;
@@ -216,7 +203,7 @@ export const __experimentalApplyCheckoutFilter = < T >( {
 
 	return useMemo( () => {
 		if (
-			! shouldReRunFilters( filterName, arg, extensions, defaultValue ) &&
+			! shouldReRunFilters( filterName, arg, extensions ) &&
 			cachedValues.current[ filterName ] !== undefined
 		) {
 			return cachedValues.current[ filterName ];

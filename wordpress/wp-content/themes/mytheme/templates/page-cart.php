@@ -19,6 +19,30 @@ if (isset($_POST['update_cart'])) {
 
 $products = WC()->cart->get_cart();
 if (count($products) > 0) {
+    function get_page_url($template_name)
+    {
+        $pages = get_posts([
+            'post_type' => 'page',
+            'post_status' => 'publish',
+            'meta_query' => [
+                [
+                    'key' => '_wp_page_template',
+                    'value' => 'templates/'.$template_name.'.php',
+                    'compare' => '='
+                ]
+            ]
+        ]);
+        if(!empty($pages))
+        {
+            foreach($pages as $pages__value)
+            {
+                return get_permalink($pages__value->ID);
+            }
+        }
+        return get_bloginfo('url');
+    }
+
+    $url = get_page_url('page-checkout');
 ?>
 <section class="h-100 gradient-custom">
     <div class="container py-5">
@@ -51,8 +75,7 @@ if (count($products) > 0) {
                                     <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                                         <!-- Image -->
                                         <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
-                                                 class="w-100" alt="Blue Jeans Jacket" />
+                                            <?php echo get_the_post_thumbnail($cart_item['product_id'])?>
                                             <a href="#!">
                                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                                             </a>
@@ -161,9 +184,9 @@ if (count($products) > 0) {
                             </li>
                         </ul>
 
-                        <button type="button" class="btn btn-primary btn-lg btn-block">
+                        <a href="<?php echo $url; ?>" type="button" class="btn btn-primary btn-lg btn-block">
                             Proceed to checkout
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
