@@ -228,3 +228,28 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
          }  ?>
 </div>
 <?php } ?>
+
+<?php
+
+function dk_page($template_name) {
+    $pages = get_posts([
+        'post_type' => 'page',
+        'post_status' => 'publish',
+        'meta_query' => [
+            [
+                'key' => '_wp_page_template',
+                'value' => 'templates/'.$template_name.'.php',
+                'compare' => '='
+            ]
+        ]
+    ]);
+    if(!empty($pages))
+    {
+        foreach($pages as $pages__value)
+        {
+            return get_permalink($pages__value->ID);
+        }
+    }
+//    return get_bloginfo('url');
+    do_action('dk_page', $template_name);
+}

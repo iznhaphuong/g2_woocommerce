@@ -19,30 +19,8 @@ if (isset($_POST['update_cart'])) {
 
 $products = WC()->cart->get_cart();
 if (count($products) > 0) {
-    function get_page_url($template_name)
-    {
-        $pages = get_posts([
-            'post_type' => 'page',
-            'post_status' => 'publish',
-            'meta_query' => [
-                [
-                    'key' => '_wp_page_template',
-                    'value' => 'templates/'.$template_name.'.php',
-                    'compare' => '='
-                ]
-            ]
-        ]);
-        if(!empty($pages))
-        {
-            foreach($pages as $pages__value)
-            {
-                return get_permalink($pages__value->ID);
-            }
-        }
-        return get_bloginfo('url');
-    }
 
-    $url = get_page_url('page-checkout');
+    $url = dk_page('page-checkout');
 ?>
 <section class="h-100 gradient-custom">
     <div class="container py-5">
