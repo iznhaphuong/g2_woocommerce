@@ -18,7 +18,6 @@ import { supports } from './support';
 import { Save } from './save';
 
 const blockConfig = {
-	apiVersion: 2,
 	title,
 	description,
 	icon: { src: icon },

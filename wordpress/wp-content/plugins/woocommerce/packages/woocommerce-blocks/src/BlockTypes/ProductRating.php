@@ -30,20 +30,9 @@ class ProductRating extends AbstractBlock {
 		return array(
 			'color'                  =>
 			array(
-				'text'                            => true,
-				'background'                      => false,
-				'link'                            => false,
-				'__experimentalSkipSerialization' => true,
-			),
-			'typography'             =>
-			array(
-				'fontSize'                        => true,
-				'__experimentalSkipSerialization' => true,
-			),
-			'spacing'                =>
-			array(
-				'margin'                          => true,
-				'__experimentalSkipSerialization' => true,
+				'text'       => true,
+				'background' => false,
+				'link'       => false,
 			),
 			'__experimentalSelector' => '.wc-block-components-product-rating',
 		);
