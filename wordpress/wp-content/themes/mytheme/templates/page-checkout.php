@@ -150,6 +150,11 @@
                             <div class="row">
                                 <div class="col-6">Sản phẩm</div>
                                 <div class="col-6">Tạm tính</div>
+                                <?php
+                                foreach (WC()->cart->get_cart() as $product_key => $product) {
+                                    $product_data = $product['data'];
+                                }
+                                ?>
                                 <div class="col-6">NJ68 MAX x 1</div>
                                 <div class="col-6">$125.00</div>
                                 <div class="col-12">
@@ -166,7 +171,7 @@
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary">Đặt hàng</button>
-                                    <a type="submit" class="btn btn-primary">Quay về trang chủ</a>
+                                    <a href="<?php echo home_url(); ?>" type="submit" class="btn btn-primary">Quay về trang chủ</a>
                                 </div>
                             </div>
                         </div>

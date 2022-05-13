@@ -279,6 +279,10 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
 
 <?php
 
+/**
+ * @param $template_name
+ * @return false|string|void|WP_Error
+ */
 function dk_page($template_name) {
     $pages = get_posts([
         'post_type' => 'page',
@@ -298,6 +302,28 @@ function dk_page($template_name) {
             return get_permalink($pages__value->ID);
         }
     }
-//    return get_bloginfo('url');
-    do_action('dk_page', $template_name);
+    return get_bloginfo('url');
+}
+
+/**
+ * @return string|void
+ */
+function dk_cart()
+{
+    do_action('dk_cart');
+    if (isset($_POST['update_cart'])) {
+        foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
+            if (isset($_POST[$cart_item['product_id']]) && $_POST[$cart_item['product_id']] > 0 && $_POST[$cart_item['product_id']] != $cart_item['quantity']) {
+                WC()->cart->set_quantity($cart_item_key, intval($_POST[$cart_item['product_id']]));
+            }
+        }
+        return "Giỏ hàng đã được cập nhật.";
+    } else {
+        foreach (WC()->cart->get_cart() as $product_key => $product) {
+            if (isset($_POST['remove_item-' . $product['product_id']])) {
+                WC()->cart->remove_cart_item($product_key);
+                return "NJ68 MAX” đã xóa.";
+            }
+        }
+    }
 }

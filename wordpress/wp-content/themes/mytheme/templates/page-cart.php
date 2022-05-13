@@ -2,26 +2,10 @@
 /* Template Name: Cart */
 
 get_header();
-if (isset($_POST['update_cart'])) {
-    foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
-        if (isset($_POST[$cart_item['product_id']]) && $_POST[$cart_item['product_id']] > 0 && $_POST[$cart_item['product_id']] != $cart_item['quantity']) {
-            WC()->cart->set_quantity($cart_item_key, intval($_POST[$cart_item['product_id']]));
-        }
-    }
-} else {
-    foreach (WC()->cart->get_cart() as $product_key => $product) {
-        if (isset($_POST['remove_item-' . $product['product_id']])) {
-            WC()->cart->remove_cart_item($product_key);
-            break;
-        }
-    }
-}
-
+$check_update = dk_cart();
+var_dump($check_update);
 $products = WC()->cart->get_cart();
-if (count($products) > 0) {
-
-    $url = dk_page('page-checkout');
-?>
+if (count($products) > 0) { ?>
 <section class="h-100 gradient-custom">
     <div class="container py-5">
         <div class="row d-flex justify-content-center my-4">
@@ -162,7 +146,7 @@ if (count($products) > 0) {
                             </li>
                         </ul>
 
-                        <a href="<?php echo $url; ?>" type="button" class="btn btn-primary btn-lg btn-block">
+                        <a href="<?php echo dk_page('page-checkout'); ?>" type="button" class="btn btn-primary btn-lg btn-block">
                             Proceed to checkout
                         </a>
                     </div>
