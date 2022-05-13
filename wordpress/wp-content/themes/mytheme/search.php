@@ -20,15 +20,15 @@ $products = getSearchResult(get_search_query());
 
                 <h3 class="mb-5"><span>Kết quả tìm với [</span><?= get_search_query() ?>]</h3>
                 <div class="d-flex ">
-                    <?php
+                <?php
                 foreach ($products as $product) { ?>
                     <div div class="product-wrapper mb-4 text-center mx-3">
                         <!-- Ảnh đại diện sản phẩm -->
                         <div class="product-img"> <a href="<?= get_permalink( $product->id)?>" data-abc="true"> <img
                                     src="<?php echo get_the_post_thumbnail_url($product->id, 'medium');?>" alt=""></a>
                             <?php
-                if(get_post_meta( $product->id, '_sale_price',true) != null) {
-                ?>
+                            if(get_post_meta( $product->id, '_sale_price',true) != null) {
+                            ?>
                             <!-- Sale price -->
                             <span
                                 class="regular"><s><?= number_format( $product->get_regular_price() ). ' VNĐ'; ?></s><br><?= number_format($product->get_sale_price()).' VNĐ' ?></span>
@@ -53,9 +53,10 @@ $products = getSearchResult(get_search_query());
                             <h4><a href="<?= get_permalink($product->id)?>"><?= $product->name?></a></h4>
                         </div>
                     </div>
+                    <?php } ?>
+                    </div>
 
-                    <?php
-                }
+                <?php
                 }
                 ?>
                 </div>
@@ -63,7 +64,6 @@ $products = getSearchResult(get_search_query());
             </div>
         <div class="col-md-3">
             <?php get_sidebar();
-            get_template_part('woocommerce/product-searchform');
             ?>
         </div>
     </div>

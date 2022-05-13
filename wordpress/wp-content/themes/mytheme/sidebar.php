@@ -2,7 +2,7 @@
     <!-- Display categories -->
 <h3 class="text-uppercase mt-100">Tìm kiếm</h3>
 <hr>
-<?= get_search_form();?>
+<?= do_shortcode('[get_g2_searchform]');?>
 
 <h3 class="text-uppercase mt-5">Danh mục</h3>
 <hr>

@@ -20,7 +20,6 @@ get_header();
         </div>
         <div class="col-md-3">
             <?php get_sidebar();
-            get_template_part('woocommerce/product-searchform');
             ?>
         </div>
     </div>

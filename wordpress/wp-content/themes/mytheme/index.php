@@ -1,8 +1,5 @@
 
 <?php
-/**
- * Template Name: Trang chủ 
- */
 get_header();
 get_template_part( 'template-parts/content/index-carousel' );
 ?>
@@ -20,7 +17,3 @@ get_template_part( 'template-parts/content/index-carousel' );
 </div>
 <?php
 get_footer();
-
-if (is_search()) {
-    echo 'dang tim';
-}

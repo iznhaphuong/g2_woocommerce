@@ -28,3 +28,13 @@ Stack trace:
 
 2022-05-12T11:35:01+00:00 CRITICAL syntax error, unexpected ':', expecting ')' in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/page-cart.php on line 12
 
+2022-05-12T16:40:48+00:00 CRITICAL syntax error, unexpected token "<", expecting end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/sidebar.php on line 7
+
+2022-05-12T16:41:35+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php on line 23
+
+2022-05-12T16:41:38+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php on line 23
+
+2022-05-12T16:41:38+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php on line 23
+
+2022-05-12T16:51:16+00:00 CRITICAL Cannot redeclare wpbsearchform() (previously declared in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php:16) in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 182
+

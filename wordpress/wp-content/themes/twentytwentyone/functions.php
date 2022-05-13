@@ -644,4 +644,4 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 function getCover() {
 	echo '<img src="'.esc_url( get_stylesheet_directory_uri().'/assets/images/Reading.jpg').'" style="object-fit: cover; height: 300px; width: 100%;" >';
 }
-add_action( 'wp_after_admin_bar_render', 'getCover' );
+// add_action( 'wp_after_admin_bar_render', 'getCover' );

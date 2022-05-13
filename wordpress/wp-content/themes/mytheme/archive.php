@@ -13,9 +13,7 @@ $term = get_term(get_queried_object_id(),'product_cat') ;
             </div>
         </div>
         <div class="col-md-3">
-            <?php get_sidebar();
-            get_template_part('woocommerce/product-searchform');
-    ?>
+            <?php get_sidebar();    ?>
         </div>
     </div>
 </div>

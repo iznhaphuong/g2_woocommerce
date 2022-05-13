@@ -12,5 +12,8 @@
         <li class="nav-item">
             <a class="nav-link" href="<?= esc_url(home_url());?>/lien-he/">Liên hệ</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="<?= esc_url(home_url());?>/gio-hang/">Giỏ hàng</a>
+        </li>
     </ul>
 </div>

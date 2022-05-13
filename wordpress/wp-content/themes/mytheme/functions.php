@@ -194,6 +194,7 @@ function wpbsearchform( $form ) {
 
   return $form;
 }
+
 //Cập nhật search form
 add_filter( 'get_search_form', 'wpbsearchform', 10 );
 
@@ -251,7 +252,6 @@ function my_styles(){
     wp_enqueue_style( 'main-style' );
 }
 add_action('wp_enqueue_scripts', 'my_styles');
-
 ?>
 
 
