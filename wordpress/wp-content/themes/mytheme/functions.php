@@ -197,10 +197,16 @@ function my_styles(){
     wp_enqueue_style( 'main-style' );
 
     wp_register_style('archive-style', get_template_directory_uri() . '/style_archive.css', 'all');
-    
+
     wp_enqueue_style( 'archive-style' );
 }
 add_action('wp_enqueue_scripts', 'my_styles');
+
+function customCssCheckout() {
+    wp_register_style('checkout-style', get_template_directory_uri() . '/checkout.css');
+
+    wp_enqueue_style( 'checkout-style' );
+}
 
 ?>
 
