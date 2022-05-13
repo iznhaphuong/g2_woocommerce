@@ -1,9 +1,8 @@
 <?php
 /* Template Name: Cart */
-
 get_header();
 $check_update = dk_cart();
-var_dump($check_update);
+
 $products = WC()->cart->get_cart();
 if (count($products) > 0) { ?>
 <section class="h-100 gradient-custom">

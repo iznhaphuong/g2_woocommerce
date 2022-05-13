@@ -250,8 +250,19 @@ function my_styles(){
     //tra ve duong da de file style.css
     wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
     wp_enqueue_style( 'main-style' );
+
+    wp_register_style('archive-style', get_template_directory_uri() . '/style_archive.css', 'all');
+
+    wp_enqueue_style( 'archive-style' );
 }
 add_action('wp_enqueue_scripts', 'my_styles');
+
+function customCssCheckout() {
+    wp_register_style('checkout-style', get_template_directory_uri() . '/checkout.css');
+
+    wp_enqueue_style( 'checkout-style' );
+}
+
 ?>
 
 
