@@ -1,14 +1,65 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+/*
+ * Theme Name: Group 2
+ * Description: Đây là theme của trang web bán món ăn
+ * Version: 1.0
+ * Theme Author: Nhóm 2
+ */
 
+body {
+    font-family: 'Kanit', sans-serif;
+}
 .mt-100 {
     margin-top: 100px
 }
+.mt-70 {
+    margin-top: 70px
+}
 .d-flex{
     flex-wrap: wrap;
-
 }
+
+.breadcrumb-link {
+    text-decoration: none;
+    color: #979797;
+}
+.breadcrumb-link:hover {
+    color: #ea8b24;
+}
+/**
+* Navbar
+*/
+.nav-link{
+    color: #111111;
+}
+
+/**
+*Categories
+*/
+.cat-item {
+    border-radius: 15px;
+}
+
+.cat-item>a {
+    text-align: right;
+    color: #000;
+}
+
+.cat-name {
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: #202020;
+}
+
+.postpercat {
+    font-family: 'Kanit', sans-serif;
+    color: #fff;
+    background: #ea8b24;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: right;
+}
+
+
 /**
 * Carousel
 */
@@ -52,7 +103,7 @@ body {
 }
 .title a {
     text-decoration: none;
-    color: #000;
+    color: #111;
 }
 .title a:hover {
     text-decoration: none;
@@ -81,7 +132,7 @@ body {
 .product-img>span>s {
     font-size: 10px;
 }
-.product-img>span.sale {
+.onsale {
     background-color: rgb(255, 73, 73);
     box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
     color: #fff;
@@ -129,7 +180,6 @@ body {
     font-size: 0.95rem;
     color: #aaa;
     font-style: italic;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -138,7 +188,6 @@ body {
     color: #000;
     font-weight: bold;
     font-style: italic;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 #searchform {
@@ -331,8 +380,13 @@ input[type="checkbox"] {
 }
 
 .logo2 {
-    background: #111111;
     text-align: center;
+    height: 100%;
+    background: #111111;
+}
+
+.bg-dark{
+    background: #111111;
 }
 
 #img-logo {
@@ -345,33 +399,6 @@ input[type="checkbox"] {
     border-radius: 50px;
 }
 
-
-/**
-*Categories
-*/
-.cat-item {
-    border-radius: 15px;
-}
-
-.cat-item>a {
-    text-align: right;
-    color: #000;
-}
-
-.cat-name {
-    font-family: 'Kanit', sans-serif;
-    text-decoration: none;
-    color: #202020;
-}
-
-.postpercat {
-    font-family: 'Kanit', sans-serif;
-    color: #fff;
-    background: #ea8b24;
-    border-radius: 50px;
-    text-align: right;
-}
-
 /**
 *Footer
 */
@@ -380,4 +407,47 @@ footer {
     text-align: center;
     color: #fff;
     padding: 30px 0;
+}
+
+
+/**
+*WOOCOMMERCE
+**/
+
+
+.woocommerce ul.products li.product .onsale {
+    background-color: rgb(255, 73, 73);
+    box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    right: 15px;
+    letter-spacing: 1px;
+    padding: 3px 12px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 15px;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    color: #111;
+    font-size: 1.5rem;
+
+}
+
+.woocommerce ul.products li.product .price del {
+    color: #111;
+    font-size: .9rem;
+}
+
+.woocommerce ul.products li.product .price {
+    color: #ea8b24;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.woocommerce ul.products li.product {
+text-align: center;
 }

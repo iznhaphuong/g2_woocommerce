@@ -1,0 +1,151 @@
+2022-05-11T14:16:12+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on bool in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:37
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php(99): getSalePercent(NULL)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-settings.php(546): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-config.php(89): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-load.php(50): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(13): require_once('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#6 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 37
+
+2022-05-11T14:20:05+00:00 CRITICAL Uncaught Error: Object of class WP_Query could not be converted to string in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:101
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): devvn_woocommerce_sale_flash('<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(189): WP_Hook->apply_filters('<span class="on...', Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/loop/sale-flash.php(27): apply_filters('woocommerce_sal...', '<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1395): wc_get_template('loop/sale-flash...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): woocommerce_show_product_loop_sale_flash('')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/content-product.php(42): do_action('woocommerce_bef...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/M...', false)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(283): WC_Shortcode_Products->get_content()
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(356): WC_Shortcodes::products(Array, '', 'products')
+#15 [internal function]: do_shortcode_tag(Array)
+#16 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(produc...', 'do_shortcode_ta...', '[products colum...')
+#17 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/all-product.php(16): do_shortcode('[products colum...')
+#18 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#19 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#20 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#21 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 101
+
+2022-05-11T14:20:53+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on bool in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:37
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php(49): getSalePercent('<span class="on...')
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): devvn_woocommerce_sale_flash('<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(189): WP_Hook->apply_filters('<span class="on...', Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/loop/sale-flash.php(27): apply_filters('woocommerce_sal...', '<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1395): wc_get_template('loop/sale-flash...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): woocommerce_show_product_loop_sale_flash('')
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/content-product.php(42): do_action('woocommerce_bef...')
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/M...', false)
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(283): WC_Shortcode_Products->get_content()
+#15 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(356): WC_Shortcodes::products(Array, '', 'products')
+#16 [internal function]: do_shortcode_tag(Array)
+#17 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(produc...', 'do_shortcode_ta...', '[products colum...')
+#18 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/all-product.php(16): do_shortcode('[products colum...')
+#19 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#20 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#21 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#22 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 37
+
+2022-05-11T14:20:55+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on bool in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:37
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php(49): getSalePercent('<span class="on...')
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): devvn_woocommerce_sale_flash('<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(189): WP_Hook->apply_filters('<span class="on...', Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/loop/sale-flash.php(27): apply_filters('woocommerce_sal...', '<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1395): wc_get_template('loop/sale-flash...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): woocommerce_show_product_loop_sale_flash('')
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/content-product.php(42): do_action('woocommerce_bef...')
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/M...', false)
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(283): WC_Shortcode_Products->get_content()
+#15 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(356): WC_Shortcodes::products(Array, '', 'products')
+#16 [internal function]: do_shortcode_tag(Array)
+#17 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(produc...', 'do_shortcode_ta...', '[products colum...')
+#18 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/all-product.php(16): do_shortcode('[products colum...')
+#19 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#20 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#21 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#22 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 37
+
+2022-05-11T14:21:11+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on bool in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:37
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php(49): getSalePercent('<span class="on...')
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(305): devvn_woocommerce_sale_flash('<span class="on...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(189): WP_Hook->apply_filters('<span class="on...', Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/loop/sale-flash.php(27): apply_filters('woocommerce_sal...', '<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1395): wc_get_template('loop/sale-flash...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): woocommerce_show_product_loop_sale_flash('')
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/content-product.php(42): do_action('woocommerce_bef...')
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/M...', false)
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(283): WC_Shortcode_Products->get_content()
+#15 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(356): WC_Shortcodes::products(Array, '', 'products')
+#16 [internal function]: do_shortcode_tag(Array)
+#17 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(produc...', 'do_shortcode_ta...', '[products colum...')
+#18 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/all-product.php(16): do_shortcode('[products colum...')
+#19 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#20 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#21 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#22 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 37
+
+2022-05-11T14:21:13+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on bool in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:37
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php(49): getSalePercent('<span class="on...')
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(305): devvn_woocommerce_sale_flash('<span class="on...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(189): WP_Hook->apply_filters('<span class="on...', Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/loop/sale-flash.php(27): apply_filters('woocommerce_sal...', '<span class="on...', Object(WP_Post), Object(WC_Product_Simple))
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1395): wc_get_template('loop/sale-flash...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): woocommerce_show_product_loop_sale_flash('')
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/woocommerce/content-product.php(42): do_action('woocommerce_bef...')
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/Applications/M...', false)
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(283): WC_Shortcode_Products->get_content()
+#15 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(356): WC_Shortcodes::products(Array, '', 'products')
+#16 [internal function]: do_shortcode_tag(Array)
+#17 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(produc...', 'do_shortcode_ta...', '[products colum...')
+#18 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/all-product.php(16): do_shortcode('[products colum...')
+#19 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#20 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#21 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#22 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 37
+
+2022-05-11T14:23:01+00:00 CRITICAL syntax error, unexpected token "/" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 49
+
+2022-05-11T15:16:45+00:00 CRITICAL syntax error, unexpected token "echo", expecting "," or ";" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/sidebar.php on line 55
+
+2022-05-11T15:49:55+00:00 CRITICAL syntax error, unexpected token "=", expecting ")" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 7
+

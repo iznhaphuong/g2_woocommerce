@@ -1,0 +1,256 @@
+2022-05-08T02:56:22+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:56:31+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:56:44+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:57:00+00:00 CRITICAL syntax error, unexpected token "{" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 16
+
+2022-05-08T02:57:10+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:57:37+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:57:43+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:58:17+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:58:29+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T02:58:48+00:00 CRITICAL Uncaught Error: Call to undefined function primary_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php:2
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(9): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-nav.php on line 2
+
+2022-05-08T03:25:53+00:00 CRITICAL Uncaught Error: Call to undefined function is_active_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-menu.php:9
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(8): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-menu.php on line 9
+
+2022-05-08T03:26:32+00:00 CRITICAL Uncaught Error: Call to undefined function is_active_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-menu.php:9
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(8): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-menu.php on line 9
+
+2022-05-08T03:26:38+00:00 CRITICAL Uncaught Error: Call to undefined function is_active_menu() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-menu.php:9
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-header.php(8): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/header.php(32): get_template_part('template-parts/...')
+#8 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(770): require_once('/Applications/M...')
+#9 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', true, Array)
+#10 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#11 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(2): get_header()
+#12 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#13 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#14 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#15 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-menu.php on line 9
+
+2022-05-08T03:26:49+00:00 CRITICAL syntax error, unexpected token "endif", expecting end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/header/site-menu.php on line 11
+
+2022-05-08T04:26:42+00:00 CRITICAL syntax error, unexpected string content "</> );" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/content/categories.php on line 74
+
+2022-05-08T04:27:02+00:00 CRITICAL syntax error, unexpected string content "</span> );" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/content/categories.php on line 74
+
+2022-05-08T07:27:38+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_after_main_content() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php on line 19
+
