@@ -4,8 +4,4 @@
 
 require_once __DIR__ . '/composer/autoload_real.php';
 
-<<<<<<< HEAD:wordpress/wp-content/plugins/reviewx/vendor/autoload.php
 return ComposerAutoloaderInitc3bcf1e9dcfc2b1c2806bd46d21c0610::getLoader();
-=======
-return ComposerAutoloaderInit2689da975c21887f34d393a116ececb6::getLoader();
->>>>>>> main:wordpress/wp-content/plugins/woocommerce/packages/woocommerce-blocks/vendor/autoload.php

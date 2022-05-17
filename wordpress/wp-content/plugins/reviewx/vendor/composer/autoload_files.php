@@ -6,10 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD:wordpress/wp-content/plugins/reviewx/vendor/composer/autoload_files.php
     '62bdc9b4196d4517fa1fcf6ff36f59ba' => $baseDir . '/app/Support/Helpers.php',
-=======
-    'fcd5d7d87e03ff4f5b5a66c2b8968671' => $baseDir . '/src/StoreApi/deprecated.php',
-    'd0f16a186498c2ba04f1d0064fecf9cf' => $baseDir . '/src/StoreApi/functions.php',
->>>>>>> main:wordpress/wp-content/plugins/woocommerce/packages/woocommerce-blocks/vendor/composer/autoload_files.php
 );

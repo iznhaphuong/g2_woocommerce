@@ -25,11 +25,6 @@ function get_image(
         '" class="' . $class . '" alt="' . $alt . '" srcset="' . $srcset . '" sizes="(max-width: ' . $image_src[1] . 'px) 100vw, ' . $image_src[1] . 'px">';
     return $image;
 }
-
-
-
-
-
 ?>
 <div class="container">
     <div class="heading-section">
@@ -38,14 +33,15 @@ function get_image(
     <div class="row">
         <div class="col-md-6">
             <!-- Hình ảnh -->
-                <img width="85%" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="">
+            <img width="85%" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="">
         </div>
         <div class="col-md-6">
             <div class="product-dtl">
                 <div class="product-info">
                     <div class="product-name">
-                       <h1> <?php the_title(); ?></div> </h1>
-
+                        <h1> <?php the_title(); ?>
+                    </div>
+                    </h1>
                     <?php
                     $review_count = $the_query->get_review_count();
                     $average      = $the_query->get_average_rating();
@@ -63,19 +59,17 @@ function get_image(
                                 <?php
                                 echo '<span style="text-decoration-line: line-through;">$' . get_post_meta(get_the_ID(), '_regular_price', true) . 'VND</span>';
                                 ?>
-
                             </span>
                         </div>
                         <span class="line-through">
-                                Sale:
-                                <?php if (get_post_meta(get_the_ID(), '_sale_price', true) != null) {
-                                    echo get_post_meta(get_the_ID(), '_sale_price', true) . 'VND';
-                                } else {
-                                    echo '';
-                                } ?>
-
-                            </span>
-                    <?php }else{ ?>
+                            Sale:
+                            <?php if (get_post_meta(get_the_ID(), '_sale_price', true) != null) {
+                                echo get_post_meta(get_the_ID(), '_sale_price', true) . 'VND';
+                            } else {
+                                echo '';
+                            } ?>
+                        </span>
+                    <?php } else { ?>
                         <div class="product-price-discount">
                             <span id="price_size">
                                 Giá:
@@ -84,7 +78,7 @@ function get_image(
                                 ?>
 
                             </span>
-                        </div>                       
+                        </div>
                     <?php } ?>
                 </div>
                 <br>
@@ -130,113 +124,17 @@ function get_image(
                 <p> <?php the_content(); ?></p>
             </div>
             <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
-
                 <!-- Xuất hiện comments -->
                 <?php
                 comments_template();
                 ?>
                 </form>
-
             </div>
         </div>
     </div>
-
     <div style="text-align:center;font-size:14px;padding-bottom:20px;">Get free icon packs for your next project at <a href="http://iiicons.in/" target="_blank" style="color:#ff5e63;font-weight:bold;">www.iiicons.in</a></div>
 </div>
 </div>
-
-<script>
-
-    $(document).ready(function() {
-        var slider = $("#slider");
-        var thumb = $("#thumb");
-        var slidesPerPage = 4; //globaly define number of elements per page
-        var syncedSecondary = true;
-        slider
-            .owlCarousel({
-                items: 1,
-                slideSpeed: 2000,
-                nav: false,
-                autoplay: false,
-                dots: false,
-                loop: true,
-                responsiveRefreshRate: 200
-            })
-            .on("changed.owl.carousel", syncPosition);
-        thumb
-            .on("initialized.owl.carousel", function() {
-                thumb.find(".owl-item").eq(0).addClass("current");
-            })
-            .owlCarousel({
-                items: slidesPerPage,
-                dots: false,
-                nav: true,
-                item: 4,
-                smartSpeed: 200,
-                slideSpeed: 500,
-                slideBy: slidesPerPage,
-                navText: [
-                    '<svg width="18px" height="18px" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>',
-                    '<svg width="25px" height="25px" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'
-                ],
-                responsiveRefreshRate: 100
-            })
-            .on("changed.owl.carousel", syncPosition2);
-
-        function syncPosition(el) {
-            var count = el.item.count - 1;
-            var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
-            if (current < 0) {
-                current = count;
-            }
-            if (current > count) {
-                current = 0;
-            }
-            thumb
-                .find(".owl-item")
-                .removeClass("current")
-                .eq(current)
-                .addClass("current");
-            var onscreen = thumb.find(".owl-item.active").length - 1;
-            var start = thumb.find(".owl-item.active").first().index();
-            var end = thumb.find(".owl-item.active").last().index();
-            if (current > end) {
-                thumb.data("owl.carousel").to(current, 100, true);
-            }
-            if (current < start) {
-                thumb.data("owl.carousel").to(current - onscreen, 100, true);
-            }
-        }
-
-        function syncPosition2(el) {
-            if (syncedSecondary) {
-                var number = el.item.index;
-                slider.data("owl.carousel").to(number, 100, true);
-            }
-        }
-        thumb.on("click", ".owl-item", function(e) {
-            e.preventDefault();
-            var number = $(this).index();
-            slider.data("owl.carousel").to(number, 300, true);
-        });
-
-        $(".qtyminus").on("click", function() {
-            var now = $(".qty").val();
-            if ($.isNumeric(now)) {
-                if (parseInt(now) - 1 > 0) {
-                    now--;
-                }
-                $(".qty").val(now);
-            }
-        });
-        $(".qtyplus").on("click", function() {
-            var now = $(".qty").val();
-            if ($.isNumeric(now)) {
-                $(".qty").val(parseInt(now) + 1);
-            }
-        });
-    });
-</script>
 <?php
 get_footer();
 ?>
