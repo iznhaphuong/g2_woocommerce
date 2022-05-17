@@ -242,6 +242,7 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
  * @return false|string|void|WP_Error
  */
 function dk_page($template_name) {
+    do_action('dk_page');
     $pages = get_posts([
         'post_type' => 'page',
         'post_status' => 'publish',
