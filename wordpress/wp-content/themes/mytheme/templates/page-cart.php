@@ -1,9 +1,12 @@
 <?php
 /* Template Name: Cart */
+// WC()->cart->add_to_cart(42);
 get_header();
 $check_update = dk_cart();
 
 $products = WC()->cart->get_cart();
+// json_encode($products);
+// die();
 if (count($products) > 0) { ?>
 <section class="h-100 gradient-custom">
     <div class="container py-5">
@@ -144,7 +147,7 @@ if (count($products) > 0) { ?>
                                 <span><strong><?php echo WC()->cart->get_cart_total(); ?></strong></span>
                             </li>
                         </ul>
-
+                                
                         <a href="<?php echo dk_page('page-checkout'); ?>" type="button" class="btn btn-primary btn-lg btn-block">
                             Proceed to checkout
                         </a>
