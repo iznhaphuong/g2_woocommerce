@@ -286,7 +286,7 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
              esc_url( get_stylesheet_directory_uri() ) . '/images/logo2.png ',
            );?>
 </div>
-<?php } ?>
+<?php }} ?>
 
 <?php
 
