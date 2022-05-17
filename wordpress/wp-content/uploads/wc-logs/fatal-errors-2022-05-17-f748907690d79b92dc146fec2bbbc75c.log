@@ -1,0 +1,10 @@
+2022-05-17T16:14:35+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(1386): wc_get_price_excluding_tax(Array, Array)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(23): WC_Abstract_Order->add_product(Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
