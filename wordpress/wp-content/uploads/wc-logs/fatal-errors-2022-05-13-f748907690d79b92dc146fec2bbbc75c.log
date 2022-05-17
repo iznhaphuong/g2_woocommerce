@@ -1,0 +1,30 @@
+2022-05-13T09:31:29+00:00 CRITICAL syntax error, unexpected '}', expecting ';' in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 273
+
+2022-05-13T09:44:28+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php on line 191
+
+2022-05-13T09:44:43+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php on line 191
+
+2022-05-13T09:45:42+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php:158
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php on line 158
+
+2022-05-13T09:47:03+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php:158
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php on line 158
+
+2022-05-13T10:31:38+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Countries as array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php:4
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-checkout.php on line 4
+

@@ -1,0 +1,165 @@
+2022-05-12T03:33:44+00:00 CRITICAL syntax error, unexpected identifier "​", expecting "(" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php on line 7
+
+2022-05-12T10:49:41+00:00 CRITICAL Uncaught Error: Undefined constant "is_tax" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php:3
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php on line 3
+
+2022-05-12T10:51:16+00:00 CRITICAL syntax error, unexpected token "}" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php on line 6
+
+2022-05-12T11:03:22+00:00 CRITICAL syntax error, unexpected token "else", expecting end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php on line 8
+
+2022-05-12T13:03:22+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_the_terms(), 0 passed in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php on line 3 and exactly 2 expected in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/category-template.php:1274
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php(3): get_the_terms()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php(4): get_template_part('archive')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#7 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#8 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/category-template.php on line 1274
+
+2022-05-12T13:03:28+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_term() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php:3
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php(4): get_template_part('archive')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php on line 3
+
+2022-05-12T13:03:33+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_term() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php:3
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php(4): get_template_part('archive')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php on line 3
+
+2022-05-12T13:03:39+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_tax() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php:3
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php(4): get_template_part('archive')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php on line 3
+
+2022-05-12T13:03:42+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_tax() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php:3
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/singular.php(4): get_template_part('archive')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/archive.php on line 3
+
+2022-05-12T13:46:40+00:00 CRITICAL syntax error, unexpected token "<", expecting end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php on line 15
+
+2022-05-12T13:46:49+00:00 CRITICAL Uncaught Error: Undefined constant "‘post_type’" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php:3
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php on line 3
+
+2022-05-12T13:48:00+00:00 CRITICAL syntax error, unexpected token ";", expecting ")" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php on line 12
+
+2022-05-12T13:53:39+00:00 CRITICAL Unmatched '}' in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 14
+
+2022-05-12T13:53:49+00:00 CRITICAL Unmatched '}' in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 14
+
+2022-05-12T13:55:06+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php:4
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php on line 4
+
+2022-05-12T13:55:51+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php:4
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php on line 4
+
+2022-05-12T13:55:57+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php:4
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php on line 4
+
+2022-05-12T14:18:44+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/search.php on line 4
+
+2022-05-12T14:41:22+00:00 CRITICAL Uncaught Error: Call to undefined function get_short_description() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/content/index-carousel.php:24
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(7): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/content/index-carousel.php on line 24
+
+2022-05-12T14:45:41+00:00 CRITICAL Uncaught Error: Call to undefined function sub_str() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/content/index-carousel.php:24
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(772): require()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template.php(716): load_template('/Applications/M...', false, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/index.php(7): get_template_part('template-parts/...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#7 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/template-parts/content/index-carousel.php on line 24
+
+2022-05-12T14:54:53+00:00 CRITICAL Uncaught Error: Call to undefined function addaction() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:285
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-settings.php(546): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-config.php(89): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-load.php(50): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(13): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 285
+
+2022-05-12T14:55:10+00:00 CRITICAL Uncaught Error: Call to undefined function addaction() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:285
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-settings.php(546): include()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-config.php(89): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-load.php(50): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(13): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 285
+
+2022-05-12T15:06:11+00:00 CRITICAL syntax error, unexpected identifier "wp_after_admin_bar_render", expecting "," or ";" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/twentytwentyone/functions.php on line 648
+
+2022-05-12T15:06:30+00:00 CRITICAL syntax error, unexpected identifier "wp_after_admin_bar_render", expecting "," or ";" in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/twentytwentyone/functions.php on line 648
+

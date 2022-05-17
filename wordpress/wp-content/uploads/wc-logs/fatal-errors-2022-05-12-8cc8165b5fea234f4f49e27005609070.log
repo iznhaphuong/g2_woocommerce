@@ -1,0 +1,40 @@
+2022-05-12T08:53:10+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1995): wc_get_price_excluding_tax(NULL)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/page-cart.php(93): WC_Cart->get_product_price(NULL)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
+2022-05-12T10:39:09+00:00 CRITICAL Uncaught Error: Call to a member function get_tax_class() on null in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php:225
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php(651): WC_Cart_Totals->get_items_from_cart()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php(143): WC_Cart_Totals->calculate_item_totals()
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php(134): WC_Cart_Totals->calculate()
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1398): WC_Cart_Totals->__construct(Object(WC_Cart))
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1357): WC_Cart->calculate_totals()
+#5 /Applications/MAMP/ht in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php on line 225
+
+2022-05-12T10:39:18+00:00 CRITICAL Uncaught Error: Call to a member function get_tax_class() on null in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php:225
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php(651): WC_Cart_Totals->get_items_from_cart()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php(143): WC_Cart_Totals->calculate_item_totals()
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php(134): WC_Cart_Totals->calculate()
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1398): WC_Cart_Totals->__construct(Object(WC_Cart))
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1357): WC_Cart->calculate_totals()
+#5 /Applications/MAMP/ht in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php on line 225
+
+2022-05-12T11:35:01+00:00 CRITICAL syntax error, unexpected ':', expecting ')' in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/page-cart.php on line 12
+
+2022-05-12T16:40:48+00:00 CRITICAL syntax error, unexpected token "<", expecting end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/sidebar.php on line 7
+
+2022-05-12T16:41:35+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php on line 23
+
+2022-05-12T16:41:38+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php on line 23
+
+2022-05-12T16:41:38+00:00 CRITICAL syntax error, unexpected end of file in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php on line 23
+
+2022-05-12T16:51:16+00:00 CRITICAL Cannot redeclare wpbsearchform() (previously declared in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/g2-plugin/g2-plugin.php:16) in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 182
+
