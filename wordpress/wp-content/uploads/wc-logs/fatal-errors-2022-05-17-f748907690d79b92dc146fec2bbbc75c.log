@@ -8,3 +8,95 @@ Stack trace:
 #5 {main}
   thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
 
+2022-05-17T16:14:53+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(1386): wc_get_price_excluding_tax(Array, Array)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(23): WC_Abstract_Order->add_product(Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
+2022-05-17T16:15:05+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(1386): wc_get_price_excluding_tax(Array, Array)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(23): WC_Abstract_Order->add_product(Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
+2022-05-17T16:15:32+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(1386): wc_get_price_excluding_tax(Array, Array)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(23): WC_Abstract_Order->add_product(Array, 1)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
+2022-05-17T16:18:13+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on array in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(1386): wc_get_price_excluding_tax(Array, Array)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(23): WC_Abstract_Order->add_product(Array, 1)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
+2022-05-17T16:32:38+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Order_Item_Product::get_price() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(1386): wc_get_price_excluding_tax(Object(WC_Order_Item_Product), Array)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(19): WC_Abstract_Order->add_product(Object(WC_Order_Item_Product), 1)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
+2022-05-17T16:33:36+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Order_Item_Product::get_price() in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1074
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php(1386): wc_get_price_excluding_tax(Object(WC_Order_Item_Product), Array)
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(22): WC_Abstract_Order->add_product(Object(WC_Order_Item_Product), 1)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#5 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1074
+
+2022-05-17T16:56:45+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Order::set_customer_note(), 0 passed in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php on line 23 and exactly 1 expected in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php:1332
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(23): WC_Order->set_customer_note()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#4 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php on line 1332
+
+2022-05-17T16:56:55+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Order::set_customer_note(), 0 passed in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php on line 23 and exactly 1 expected in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php:1332
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php(23): WC_Order->set_customer_note()
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/template-loader.php(106): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-blog-header.php(19): require_once('/Applications/M...')
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/index.php(17): require('/Applications/M...')
+#4 {main}
+  thrown in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php on line 1332
+
+2022-05-17T17:13:56+00:00 CRITICAL syntax error, unexpected '$order' (T_VARIABLE) in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 315
+
+2022-05-17T17:18:16+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php:308
+Stack trace:
+#0 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): create_vip_order('')
+#1 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#3 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/plugins/woocommerce/includes/class-woocommerce.php(635): do_action('woocommerce_ini...')
+#4 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(303): WooCommerce->init('')
+#5 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-includes/plugin.php(470): WP_Hook->do_action(Arra in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/functions.php on line 308
+
+2022-05-17T19:03:23+00:00 CRITICAL syntax error, unexpected 'j' (T_STRING), expecting ')' in /Applications/MAMP/htdocs/wordpress_nhom2/wordpress/wp-content/themes/mytheme/templates/page-cart.php on line 30
+

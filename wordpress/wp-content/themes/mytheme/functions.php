@@ -242,7 +242,6 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
  * @return false|string|void|WP_Error
  */
 function dk_page($template_name) {
-    do_action('dk_page');
     $pages = get_posts([
         'post_type' => 'page',
         'post_status' => 'publish',
@@ -269,7 +268,6 @@ function dk_page($template_name) {
  */
 function dk_cart()
 {
-    do_action('dk_cart');
     if (isset($_POST['update_cart'])) {
         foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
             if (isset($_POST[$cart_item['product_id']]) && $_POST[$cart_item['product_id']] > 0 && $_POST[$cart_item['product_id']] != $cart_item['quantity']) {
@@ -285,4 +283,30 @@ function dk_cart()
             }
         }
     }
+}
+
+/**
+ * @param $address
+ * @param $products
+ * @param $note
+ * @return WC_Order|WP_Error
+ * @throws WC_Data_Exception
+ */
+function dk_create_order($address, $products, $note) {
+    $order = wc_create_order();
+
+    $order->set_address($address, 'billing');
+    foreach ($products as $product) {
+        $order->add_product(wc_get_product($product['product_id']), $product['quantity']);
+    }
+    $order->set_customer_note($note);
+    $order->calculate_totals();
+    $order->update_status("Processing", 'Imported order', TRUE);
+    $order->set_payment_method_title('Tiền mặt khi nhận hàng');
+
+    foreach ($products as $cart_item_key => $cart_item) {
+        WC()->cart->remove_cart_item($cart_item_key);
+    }
+
+   return $order;
 }
