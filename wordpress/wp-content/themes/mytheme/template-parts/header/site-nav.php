@@ -1,5 +1,5 @@
 <div>
-    <ul class="nav justify-content-center py-4 ">
+    <ul class="nav bg-dark justify-content-center py-4 ">
         <li class="nav-item">
             <a class="nav-link" href="<?= esc_url(home_url())?>">Trang chủ</a>
         </li>

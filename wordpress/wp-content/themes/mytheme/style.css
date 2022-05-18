@@ -5,33 +5,51 @@
  * Theme Author: Nhóm 2
  */
 
-body {
+ body {
     font-family: 'Kanit', sans-serif;
 }
+
 .mt-100 {
     margin-top: 100px
 }
+
 .mt-70 {
     margin-top: 70px
 }
-.d-flex{
+.mt-80 {
+margin-top : 80px
+}
+
+.d-flex {
     flex-wrap: wrap;
 }
+
+.my-bg {
+     background: #ea7a24;
+}
+bg-dark {
+    background:rgb(25, 25, 25);
+}
+
 
 .breadcrumb-link {
     text-decoration: none;
     color: #979797;
 }
+
 .breadcrumb-link:hover {
     color: #ea8b24;
 }
+
 /**
 * Navbar
 */
-.nav-link{
-    color: #111111;
+.nav-link {
+    color: #fff;
 }
-
+.nav-link:hover{
+    color: #ea8b24;
+}
 /**
 *Categories
 */
@@ -63,14 +81,16 @@ body {
 /**
 * Carousel
 */
-.carousel{
-      background: #000;
+.carousel {
+    background: #000;
 }
-.carousel-item>img{
+
+.carousel-item>img {
     width: 500px;
     height: 500px;
     object-fit: cover;
 }
+
 /**
 * Product List
 */
@@ -81,6 +101,7 @@ body {
     position: relative;
     width: 250px;
 }
+
 .product-img img {
     width: 250px;
     height: 250px;
@@ -101,18 +122,21 @@ body {
 .title {
     width: 100%;
 }
+
 .title a {
     text-decoration: none;
     color: #111;
 }
+
 .title a:hover {
     text-decoration: none;
     color: rgb(44, 133, 250);
 }
-.product-img{
-    border-radius: 10px
 
+.product-img {
+    border-radius: 10px
 }
+
 .product-img>span.regular {
     background-color: #fff;
     box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
@@ -132,6 +156,7 @@ body {
 .product-img>span>s {
     font-size: 10px;
 }
+
 .onsale {
     background-color: rgb(255, 73, 73);
     box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
@@ -385,7 +410,7 @@ input[type="checkbox"] {
     background: #111111;
 }
 
-.bg-dark{
+.bg-dark {
     background: #111111;
 }
 
@@ -449,5 +474,34 @@ footer {
 }
 
 .woocommerce ul.products li.product {
-text-align: center;
+    text-align: center;
 }
+
+
+/**
+* Cart
+*/
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #5ee7df;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5))
+}
+
+.title-cart {
+    transform: translateY(50%) !important;
+}
+
+.start-0-fix {
+    left: 12px;
+}
+
+.btn-fix {
+    margin-left: 5%;
+}
+

@@ -15,7 +15,7 @@ function get_g2_searchform( $form ) {
       <div class="input-group-prepend" id="searchsubmit">
         <button id="button-addon2" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
       </div>
-      <input type="search"  value="'. esc_attr( get_search_query() ) .'" name="s" id="s" placeholder="Search" aria-describedby="button-addon2" class="form-control border-0 bg-light required">
+      <input type="search"  value="'. esc_attr( get_search_query() ) .'" name="s" id="s" placeholder="Search" aria-describedby="button-addon2" class="form-control border-0 bg-light" required>
     </div>
   </div>
   </form>';
