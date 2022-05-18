@@ -26,17 +26,18 @@ function get_image(
     return $image;
 }
 ?>
-<div class="container">
-    <div class="heading-section">
-        <h2>Product Details</h2>
-    </div>
+
+
+<div class="container-lg my-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
+            <div class="mx-5">
             <!-- Hình ảnh -->
-            <img width="85%" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="">
+            <img width="100%" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="">
+            </div>
         </div>
-        <div class="col-md-6">
-            <div class="product-dtl">
+        <div class="col-md-8">
+            <div class="product-dtl mx-5">
                 <div class="product-info">
                     <div class="product-name">
                         <h1> <?php the_title(); ?>
@@ -49,41 +50,41 @@ function get_image(
                     ?>
                     <div class="reviews-counter" style="float:right;">
 
-                        <?php echo $review_count . ' '; ?> <i>Reviews</i>
+                        <?php echo $review_count . ' '; ?> <i>Đánh giá</i>
                     </div>
                     <!-- Điều kiện để gạch giá sản phẩm -->
                     <?php if (get_post_meta(get_the_ID(), '_sale_price', true) != null) { ?>
-                        <div class="product-price-discount">
-                            <span id="price_size">
-                                Giá:
-                                <?php
+                    <div class="product-price-discount">
+                        <span id="price_size">
+                            Giá:
+                            <?php
                                 echo '<span style="text-decoration-line: line-through;">$' . get_post_meta(get_the_ID(), '_regular_price', true) . 'VND</span>';
                                 ?>
-                            </span>
-                        </div>
-                        <span class="line-through">
-                            Sale:
-                            <?php if (get_post_meta(get_the_ID(), '_sale_price', true) != null) {
+                        </span>
+                    </div>
+                    <span class="line-through">
+                        Sale:
+                        <?php if (get_post_meta(get_the_ID(), '_sale_price', true) != null) {
                                 echo get_post_meta(get_the_ID(), '_sale_price', true) . 'VND';
                             } else {
                                 echo '';
                             } ?>
-                        </span>
+                    </span>
                     <?php } else { ?>
-                        <div class="product-price-discount">
-                            <span id="price_size">
-                                Giá:
-                                <?php
+                    <div class="product-price-discount">
+                        <span id="price_size">
+                            Giá:
+                            <?php
                                 echo '<span>' . get_post_meta(get_the_ID(), '_regular_price', true) . 'VND</span>';
                                 ?>
 
-                            </span>
-                        </div>
+                        </span>
+                    </div>
                     <?php } ?>
                 </div>
                 <br>
-                <div style="display:flex;">Tình Trạng: <p>
-                        <?php echo get_post_meta(get_the_ID(), '_stock_status', true); ?></p>
+                <div style="display:flex;">Tình Trạng:
+                        <?php echo get_post_meta(get_the_ID(), '_stock_status', true); ?>
                 </div>
                 <!-- Mô tả -->
                 <?php the_excerpt(); ?>
@@ -109,13 +110,15 @@ function get_image(
             </div>
         </div>
     </div>
-    <div class="product-info-tabs">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <div class="product-info-tabs m-5">
+        <ul class="bg-dark nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab"
+                    aria-controls="description" aria-selected="true">Mô tả</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Comments </a>
+                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" 
+                    aria-selected="false">Đánh giá</a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -132,9 +135,8 @@ function get_image(
             </div>
         </div>
     </div>
-    <div style="text-align:center;font-size:14px;padding-bottom:20px;">Get free icon packs for your next project at <a href="http://iiicons.in/" target="_blank" style="color:#ff5e63;font-weight:bold;">www.iiicons.in</a></div>
 </div>
-</div>
+
 <?php
 get_footer();
 ?>

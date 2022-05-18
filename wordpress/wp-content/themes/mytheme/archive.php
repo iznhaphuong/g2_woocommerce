@@ -3,7 +3,7 @@ get_header();
 $term = get_term(get_queried_object_id(),'product_cat') ;
 
 ?>
-<div class="container-lg">
+<div class="container-lg mb-5">
     <div class="row">
         <div class="col-md-9">
         <div class="mx-5 mt-70">
