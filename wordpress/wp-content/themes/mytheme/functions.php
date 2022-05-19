@@ -253,7 +253,6 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
  * @return false|string|void|WP_Error
  */
 function dk_page($template_name) {
-    do_action('dk_page');
     $pages = get_posts([
         'post_type' => 'page',
         'post_status' => 'publish',
@@ -280,7 +279,6 @@ function dk_page($template_name) {
  */
 function dk_cart()
 {
-    do_action('dk_cart');
     if (isset($_POST['update_cart'])) {
         foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
             if (isset($_POST[$cart_item['product_id']]) && $_POST[$cart_item['product_id']] > 0 && $_POST[$cart_item['product_id']] != $cart_item['quantity']) {
@@ -292,16 +290,34 @@ function dk_cart()
         foreach (WC()->cart->get_cart() as $product_key => $product) {
             if (isset($_POST['remove_item-' . $product['product_id']])) {
                 WC()->cart->remove_cart_item($product_key);
-                return "NJ68 MAX” đã xóa.";
+                return "Thực đơn đã được xóa.";
             }
         }
     }
 }
 
-// archve.php
-add_action('woocommerce_after_shop_loop_item_title','change_loop_ratings_location', 2 );
-function change_loop_ratings_location(){
-    remove_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating', 5 );
-    add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating', 15 );
+/**
+ * @param $address
+ * @param $products
+ * @param $note
+ * @return WC_Order|WP_Error
+ * @throws WC_Data_Exception
+ */
+function dk_create_order($address, $products, $note) {
+    $order = wc_create_order();
+
+    $order->set_address($address, 'billing');
+    foreach ($products as $product) {
+        $order->add_product(wc_get_product($product['product_id']), $product['quantity']);
+    }
+    $order->set_customer_note($note);
+    $order->calculate_totals();
+    $order->update_status("Processing", 'Imported order', TRUE);
+    $order->set_payment_method_title('Tiền mặt khi nhận hàng');
+
+    foreach ($products as $cart_item_key => $cart_item) {
+        WC()->cart->remove_cart_item($cart_item_key);
+    }
+
+   return $order;
 }
-// C:\WAMP64\WWW\WORDPRESS_NHOM2\WORDPRESS\WP-CONTENT\THEMES\MYTHEME\TEMPLATE-PARTS\CONTENT\INDEX-PRODUCT.PHP ON LINE 30
