@@ -204,24 +204,91 @@ if (count($products) > 0) {
     <?php
 } else {
     ?>
-    <section class="h-100 gradient-custom">
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center my-4">
-                <div class="col-md-8">
-                    <div class="card mb-4">
-                        <div class="card-header py-3">
-                            <div class="row">
+    <section class="gradient-custom">
+        <div class="container">
+            <div class="card">
+                <div class="row p-fix">
+                    <div class="col-md-12 ">
+                        <h3 class="text-center">
+                            Đặt thực đơn thành công!
+                        </h3>
+                        <p>
+                            Order number: <?php echo $order->get_order_number(); ?>
+                        <p>
+                            Date: <?php echo $order->get_date_created()->format('F j,Y – g:i A'); ?>
+                        </p>
+                        <p>
+                            Email: <?php echo $order->get_billing_email(); ?>
+                        </p>
+                        <p>
+                            Total: $<?php echo $order->get_total(); ?>
+                        </p>
+                        <p>
+                            Payment method: Cash on delivery
+                        </p>
+                        <p>
+                            Pay with cash upon delivery.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <h3 class="text-center">
+                            Chi tiết đơn hàng
+                        </h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>
+                            Tổng thực đơn
+                        </h4>
+                        <p>
+                            <?php
+                            foreach ($order->get_items() as $item_id => $item) {
+                                $product_name = $item->get_name();
+                                $quantity = $item->get_quantity();
+                                $subtotal = $item->get_subtotal();
+                                ?>
+                                <?php echo "<a href=''>" . $product_name . "</a> × " . $quantity . " | $" . $subtotal ?><br>
+                                <?php
+                            }
+                            ?>
+                        </p>
+                        <p>
+                            Giao hàng: <?php echo $order->get_shipping_to_display(); ?>
+                        </p>
+                        <p>
+                            Phương thức thanh toán: <?php echo $order->get_payment_method_title(); ?>
+                        </p>
+                        <p>
+                            Tổng số tiền: $<?php echo $order->get_total(); ?>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>
+                            Địa chỉ thanh toán
+                        </h4>
+                        <p>
 
-                            </div>
-                        </div>
+                            <?php echo $order->get_billing_last_name() . " " . $order->get_billing_first_name(); ?>
+                        </p>
+                        <p>
+                            <?php echo $order->get_billing_address_1(); ?>
+                        </p>
+                        <p>
+                            <?php echo $order->get_billing_city(); ?>
+                        </p>
+                        <p>
+                            <?php echo $order->get_billing_country(); ?>
+                        </p>
+                        <p>
+                            <?php echo $order->get_billing_phone(); ?>
+                        </p>
+                        <p>
+                            <?php echo $order->get_billing_email(); ?>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <?php
 }
-?>
-<?php
 get_footer();

@@ -41,3 +41,6 @@
 input[type="checkbox"] {
     display: inline-block;
 }
+.p-fix {
+    padding: 6%;
+}

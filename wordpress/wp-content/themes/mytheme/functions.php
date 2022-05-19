@@ -279,7 +279,7 @@ function dk_cart()
         foreach (WC()->cart->get_cart() as $product_key => $product) {
             if (isset($_POST['remove_item-' . $product['product_id']])) {
                 WC()->cart->remove_cart_item($product_key);
-                return "NJ68 MAX” đã xóa.";
+                return "Thực đơn đã được xóa.";
             }
         }
     }

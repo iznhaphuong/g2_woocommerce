@@ -1,77 +1,6 @@
 <?php
 /* Template Name: Cart */
 
-$address = array(
-    'first_name' => '111Joe',
-    'last_name' => 'Conlin',
-    'company' => 'Speed Society',
-    'email' => 'joe@testing.com',
-    'phone' => '760-555-1212',
-    'address_1' => '123 Main st.',
-    'address_2' => '104',
-    'city' => 'San Diego',
-    'state' => 'Ca',
-    'postcode' => '92121',
-    'country' => 'US'
-);
-
-// Now we create the order
-$order = wc_create_order();
-$order->set_payment_method_title('Tiền mặt khi nhận hàng');
-// The add_product() function below is located in /plugins/woocommerce/includes/abstracts/abstract_wc_order.php
-$order->add_product(wc_get_product('12'), 4); // This is an existing SIMPLE product
-$order->add_product(wc_get_product('16'), 1); // This is an existing SIMPLE product
-$order->set_address($address, 'billing');
-//
-$order->calculate_totals();
-$order->update_status("Completed", 'Imported order', TRUE);
-?>
-<p>
-    Order number: <?php echo $order->get_order_number(); ?> <br>
-    Date: <?php echo $order->get_date_created()->format('F j,Y – g:i A'); ?> <br>
-    Email: <?php echo $order->get_billing_email(); ?> <br>
-    Total: $<?php echo $order->get_total(); ?> <br>
-    Payment method: Cash on delivery <br>
-    Pay with cash upon delivery. <br>
-</p>
-<h3>Order details</h3>
-<p>
-    Product Total<br>
-    <?php
-    foreach ($order->get_items() as $item_id => $item) {
-        $product_id = $item->get_product_id();
-        $variation_id = $item->get_variation_id();
-        $product = $item->get_product();
-        $product_name = $item->get_name();
-        $quantity = $item->get_quantity();
-        $subtotal = $item->get_subtotal();
-        $total = $item->get_total();
-        $tax = $item->get_subtotal_tax();
-        $taxclass = $item->get_tax_class();
-        $taxstat = $item->get_tax_status();
-        $allmeta = $item->get_meta_data();
-        $somemeta = $item->get_meta('_whatever', true);
-        $product_type = $item->get_type();
-        ?>
-        <?php echo "<a href=''>" . $product_name . "</a> × " . $quantity . " | $" . $subtotal ?><br>
-        <?php
-    }
-    ?>
-    Shipping: <?php echo $order->get_shipping_to_display(); ?><br>
-    Payment method: <?php echo $order->get_payment_method_title(); ?><br>
-    Total: $<?php echo $order->get_total(); ?><br>
-    <br>
-    Billing address<br>
-    <?php echo $order->get_billing_last_name() . " " . $order->get_billing_first_name(); ?><br>
-    <?php echo $order->get_billing_address_1(); ?><br>
-    <?php echo $order->get_billing_city(); ?><br>
-    <?php echo $order->get_billing_country(); ?><br>
-    <?php echo $order->get_billing_phone(); ?><br>
-    <br>
-    <?php echo $order->get_billing_email(); ?>
-</p>
-<?php
-die();
 get_header();
 $check_update = dk_cart();
 
@@ -88,6 +17,11 @@ if (count($products) > 0) { ?>
                                 <div class="col-md-8">
                                     <h5 class="mb-0 title-cart">
                                         Cart - <?php echo count($products); ?> items
+                                        <?php
+                                            if ($check_update != null) {
+                                                echo ' | ' . $check_update;
+                                            }
+                                        ?>
                                     </h5>
                                 </div>
                                 <div class="col-md-4">
@@ -240,7 +174,7 @@ if (count($products) > 0) { ?>
     </section>
     <?php
 } else { ?>
-    <section class="h-100 gradient-custom">
+    <section class="gradient-custom">
         <div class="container py-5">
             <div class="row d-flex justify-content-center my-4">
                 <div class="col-md-8">
@@ -249,7 +183,15 @@ if (count($products) > 0) { ?>
                             <div class="row">
                                 <div class="col-md-8">
                                     <h5 class="mb-0 title-cart">
-                                        Your cart is currently empty.
+                                        Bạn chưa có thực đơn trong giỏ hàng.
+                                    </h5>
+                                    <br>
+                                    <h5>
+                                        <?php
+                                        if ($check_update != null) {
+                                            echo $check_update;
+                                        }
+                                        ?>
                                     </h5>
                                 </div>
                                 <div class="col-md-4">
