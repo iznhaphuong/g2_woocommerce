@@ -321,3 +321,11 @@ function dk_create_order($address, $products, $note) {
 
    return $order;
 }
+
+//archive.php
+add_action('woocommerce_after_shop_loop_item_title','change_loop_ratings_location', 2 );
+function change_loop_ratings_location(){
+    remove_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating', 5 );
+    add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating', 15 );
+}
+// C:\WAMP64\WWW\WORDPRESS_NHOM2\WORDPRESS\WP-CONTENT\THEMES\MYTHEME\TEMPLATE-PARTS\CONTENT\INDEX-PRODUCT.PHP ON LINE 30
