@@ -91,12 +91,13 @@ function get_image(
                 <div class="product-count">
                     <!-- Add Sản phẩm vào cart -->
                     <?php
-                    $url = rtrim(dk_page('page-cart'), "/");
+                    $url = rtrim(dk_page('page-cart'));
                     echo apply_filters(
                         'woocommerce_loop_add_to_cart_link',
                         sprintf(
-                            '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="add-cart button %s product_type_%s buynow">Add to cart</a>',
+                            '<a href="%s" rel="nofollow" quantity="%s" data-product_id="%s"  data-product_sku="%s" class="add-cart button %s product_type_%s buynow">Add to cart</a>',
                             esc_url($url . $the_query->add_to_cart_url()),
+                            esc_attr( isset( $quantity ) ? $quantity : 1 ),
                             esc_attr($the_query->id),
                             esc_attr($the_query->get_sku()),
                             $the_query->is_purchasable() ? 'add_to_cart_button' : '',

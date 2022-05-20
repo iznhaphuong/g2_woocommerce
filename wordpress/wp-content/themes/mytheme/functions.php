@@ -230,7 +230,7 @@ function customCssCheckout() {
 
 if ( ! function_exists( 'mytheme_logo' ) ) {
    function mytheme_logo() {?>
-<div class="logo2">
+<div class="logo2" style="overflow: hidden;">
     <?php
            printf(
              //truyền các tham số lần lượt url, title, logo, description
@@ -279,6 +279,11 @@ function dk_page($template_name) {
  */
 function dk_cart()
 {
+    do_action('dk_cart');
+    if (isset($_GET['add-to-cart'])) {
+      wp_redirect( dk_page('page-cart') );
+      exit;
+    }
     if (isset($_POST['update_cart'])) {
         foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
             if (isset($_POST[$cart_item['product_id']]) && $_POST[$cart_item['product_id']] > 0 && $_POST[$cart_item['product_id']] != $cart_item['quantity']) {
