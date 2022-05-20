@@ -1,10 +1,14 @@
 <?php
 /* Template Name: Cart */
 // WC()->cart->add_to_cart(42);
+
+
+
 get_header();
 $check_update = dk_cart();
 
 $products = WC()->cart->get_cart();
+
 // json_encode($products);
 // die();
 if (count($products) > 0) { ?>

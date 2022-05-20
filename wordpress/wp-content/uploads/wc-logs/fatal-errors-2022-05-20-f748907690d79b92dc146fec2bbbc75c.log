@@ -1,0 +1,68 @@
+2022-05-20T00:57:36+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-cart.php:4
+Stack trace:
+#0 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\wamp64\www\wordpress_nhom2\wordpress\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#2 C:\wamp64\www\wordpress_nhom2\wordpress\index.php(17): require('C:\\wamp64\\www\\w...')
+#3 {main}
+  thrown in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-cart.php on line 4
+
+2022-05-20T00:57:42+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-cart.php:4
+Stack trace:
+#0 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\wamp64\www\wordpress_nhom2\wordpress\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#2 C:\wamp64\www\wordpress_nhom2\wordpress\index.php(17): require('C:\\wamp64\\www\\w...')
+#3 {main}
+  thrown in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-cart.php on line 4
+
+2022-05-20T00:57:57+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-cart.php:4
+Stack trace:
+#0 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\wamp64\www\wordpress_nhom2\wordpress\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#2 C:\wamp64\www\wordpress_nhom2\wordpress\index.php(17): require('C:\\wamp64\\www\\w...')
+#3 {main}
+  thrown in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-cart.php on line 4
+
+2022-05-20T01:14:46+00:00 CRITICAL Uncaught Error: Call to a member function add_to_cart_url() on null in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\template-parts\content\index-product.php:42
+Stack trace:
+#0 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template.php(772): require()
+#1 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template.php(716): load_template('C:\\wamp64\\www\\w...', false, Array)
+#2 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\index.php(10): get_template_part('template-parts/...')
+#4 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template-loader.php(106): include('C:\\wamp64\\www\\w...')
+#5 C:\wamp64\www\wordpress_nhom2\wordpress\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#6 C:\wamp64\www\wordpress_nhom2\wordpress\index.php(17): require('C:\\wamp64\\www\\w...')
+#7 {main}
+  thrown in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\template-parts\content\index-product.php on line 42
+
+2022-05-20T01:15:06+00:00 CRITICAL Uncaught Error: Call to a member function add_to_cart_url() on null in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\template-parts\content\index-product.php:42
+Stack trace:
+#0 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template.php(772): require()
+#1 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template.php(716): load_template('C:\\wamp64\\www\\w...', false, Array)
+#2 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\index.php(10): get_template_part('template-parts/...')
+#4 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template-loader.php(106): include('C:\\wamp64\\www\\w...')
+#5 C:\wamp64\www\wordpress_nhom2\wordpress\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#6 C:\wamp64\www\wordpress_nhom2\wordpress\index.php(17): require('C:\\wamp64\\www\\w...')
+#7 {main}
+  thrown in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\template-parts\content\index-product.php on line 42
+
+2022-05-20T01:15:14+00:00 CRITICAL Uncaught Error: Call to a member function add_to_cart_url() on null in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\template-parts\content\index-product.php:42
+Stack trace:
+#0 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template.php(772): require()
+#1 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template.php(716): load_template('C:\\wamp64\\www\\w...', false, Array)
+#2 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\index.php(10): get_template_part('template-parts/...')
+#4 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template-loader.php(106): include('C:\\wamp64\\www\\w...')
+#5 C:\wamp64\www\wordpress_nhom2\wordpress\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#6 C:\wamp64\www\wordpress_nhom2\wordpress\index.php(17): require('C:\\wamp64\\www\\w...')
+#7 {main}
+  thrown in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\template-parts\content\index-product.php on line 42
+
+2022-05-20T01:40:24+00:00 CRITICAL Uncaught Error: Call to undefined function dk_create_order() in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-checkout.php:24
+Stack trace:
+#0 C:\wamp64\www\wordpress_nhom2\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\wamp64\www\wordpress_nhom2\wordpress\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#2 C:\wamp64\www\wordpress_nhom2\wordpress\index.php(17): require('C:\\wamp64\\www\\w...')
+#3 {main}
+  thrown in C:\wamp64\www\wordpress_nhom2\wordpress\wp-content\themes\mytheme\templates\page-checkout.php on line 24
+

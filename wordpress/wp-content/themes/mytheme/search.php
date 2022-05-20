@@ -3,10 +3,10 @@ get_header();
 $products = getSearchResult(get_search_query());
 
 ?>
-<div class="container-lg">
+<div class="container-lg mb-5">
     <div class="row">
         <div class="col-md-9">
-            <div class="mx-5 mt-70">
+            <div class="mx-5 mt-100">
                 <?php woocommerce_breadcrumb();
                 if (get_search_query() == "") {
                     ?>

@@ -15,7 +15,7 @@ function getSearchResult($s)
 /**
  * Lấy tất cả danh mục sản phẩm
  */
-function getAllCategories(){
+function getCategories(){
   $taxonomy     = 'product_cat';
   $orderby      = 'name';  
   $show_count   = 0;      // 1 for yes, 0 for no
@@ -34,7 +34,34 @@ function getAllCategories(){
   );
   return get_categories($args);
 }
+/**
+ * Lấy ra danh mục con của $category_id
+ */
+function getSubCategories($category_id) {
+  $taxonomy     = 'product_cat';
+  $orderby      = 'name';  
+  $show_count   = 0;      // 1 for yes, 0 for no
+  $pad_counts   = 0;      // 1 for yes, 0 for no
+  $hierarchical = 1;      // 1 for yes, 0 for no  
+  $title        = '';  
+  $empty        = 0;
+
+  $args = array(
+    'taxonomy'     => $taxonomy,
+    'child_of'     => 0,
+    'parent'       => $category_id,
+    'orderby'      => $orderby,
+    'show_count'   => $show_count,
+    'pad_counts'   => $pad_counts,
+    'hierarchical' => $hierarchical,
+    'title_li'     => $title,
+    'hide_empty'   => $empty
+);
+
+return get_categories( $args );
+}
 ?>
+
 
 <?php
 /**
@@ -48,15 +75,14 @@ function getSalePercent( $product_id ) {
       $sale_price     = $product->get_sale_price();
       $sale_percent = round( ( ( floatval( $regular_price ) - floatval( $sale_price ) ) / floatval( $regular_price ) ) * 100 );
   } 
-  // return percentage_format( $sale_percent );
   return str_replace( '{sale_percent}', $sale_percent, '-{sale_percent}%' );
-
 }
-//
+
 add_filter('woocommerce_sale_flash', 'my_woocommerce_sale_flash', 10, 3);
 function my_woocommerce_sale_flash($html, $post, $product_id){
     return '<span class="onsale">'. getSalePercent($product_id) . '</span>';
 }
+
 /**
  * Lấy sản phẩm mới nhất
  */
@@ -109,64 +135,6 @@ function getSaleProducts ($args) {
     )
   )); 
 }
-
-/**
- * Tính số lượt xem
- * 
- */
-
-//Hàm lấy lượt xem
-function getPostViews($postID){
-  $count_key = 'post_views_count';
-  $count = get_post_meta($postID, $count_key, true);
-  if($count==''){
-  delete_post_meta($postID, $count_key);
-  add_post_meta($postID, $count_key, '0');
-  return 1;
-  }
-  return $count;
-  }
-  // Hàm đếm lượt xem
-  function setPostViews($postID) {
-  $count_key = 'post_views_count';
-  $count = get_post_meta($postID, $count_key, true);
-  if($count==''){
-  $count = 0;
-  delete_post_meta($postID, $count_key);
-  add_post_meta($postID, $count_key, '0');
-  }else{
-  $count++;
-  update_post_meta($postID, $count_key, $count);
-    }
-  }
-  //Code hiển thị lượt view trong dashboard
-  add_filter('manage_posts_columns', 'posts_column_views');
-  add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
-  function posts_column_views($defaults){
-  $defaults['post_views'] = __('Views');
-  return $defaults;
-  }
-  function posts_custom_column_views($column_name, $id){
-  if($column_name === 'post_views'){
-  echo getPostViews(get_the_ID());
-  }
-  }
-
-//Dòng này để chắc chắc WordPress sẽ đếm chính xác hơn
-remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-
-function wpb_get_post_views($postID){
-  $count_key = 'wpb_post_views_count';
-  $count = get_post_meta($postID, $count_key, true);
-  if($count==''){
-      delete_post_meta($postID, $count_key);
-      add_post_meta($postID, $count_key, '0');
-      return 0;
-  }
-  return $count;
-}
-
-
 /**
  * Thêm search form vào menu
  */
@@ -187,7 +155,7 @@ function wpbsearchform( $form ) {
     <div class="input-group-prepend" id="searchsubmit">
       <button id="button-addon2" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
     </div>
-    <input type="search"  value="'. esc_attr( get_search_query() ) .'" name="s" id="s" placeholder="Search" aria-describedby="button-addon2" class="form-control border-0 bg-light required">
+    <input type="search"  value="'. esc_attr( get_search_query() ) .'" name="s" id="s" placeholder="Search" aria-describedby="button-addon2" class="form-control border-0 bg-light" required>
   </div>
 </div>
 </form>';
@@ -197,6 +165,7 @@ function wpbsearchform( $form ) {
 
 //Cập nhật search form
 add_filter( 'get_search_form', 'wpbsearchform', 10 );
+
 
 
 
@@ -221,24 +190,15 @@ if ( ! function_exists( 'mytheme_menu' ) ) {
 }
 
 
-
-
-
-
 /**
  * Đăng kí menu
  */
-function nav_add_custom_menu(){
+function add_custom_menu(){
+  //my-custom-menu là id hay slug của menu
   register_nav_menu('my-custom-menu',__('My Custom Menu'));
-  register_nav_menus(
-    array(
-      'primary' => esc_html__( 'Primary menu', 'twentytwentyone' ),
-      'footer'  => esc_html__( 'Secondary menu', 'twentytwentyone' ),
-    )
-  );
 }
 
-add_action('init', 'nav_add_custom_menu');
+add_action('init', 'add_custom_menu');
 
 
 
@@ -247,23 +207,19 @@ add_action('init', 'nav_add_custom_menu');
  * Thêm CSS
  */
 function my_styles(){
-    //tra ve duong da de file style.css
-    wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
-    wp_enqueue_style( 'main-style' );
-
-    wp_register_style('archive-style', get_template_directory_uri() . '/style_archive.css', 'all');
-
-    wp_enqueue_style( 'archive-style' );
+  wp_enqueue_style('main-style', get_template_directory_uri().'/style.css', array(), false, 'all');
 }
+
 add_action('wp_enqueue_scripts', 'my_styles');
 
 function customCssCheckout() {
-    wp_register_style('checkout-style', get_template_directory_uri() . '/checkout.css');
+  wp_register_style('checkout-style', get_template_directory_uri() . '/checkout.css');
 
-    wp_enqueue_style( 'checkout-style' );
+  wp_enqueue_style( 'checkout-style' );
 }
 
 ?>
+
 
 
 <?php 
@@ -274,7 +230,7 @@ function customCssCheckout() {
 
 if ( ! function_exists( 'mytheme_logo' ) ) {
    function mytheme_logo() {?>
-<div class="logo2">
+<div class="logo2" style="overflow: hidden;">
     <?php
            printf(
              //truyền các tham số lần lượt url, title, logo, description
@@ -283,10 +239,12 @@ if ( ! function_exists( 'mytheme_logo' ) ) {
              ',
              get_bloginfo( 'url' ),
              get_bloginfo( 'sitename' ),
-             esc_url( get_stylesheet_directory_uri() ) . '/images/logo2.png ',
+             esc_url( get_stylesheet_directory_uri() ) . '/images/logo2.png',
            );?>
 </div>
-<?php }} ?>
+<?php }  ?>
+<?php } ?>
+
 
 <?php
 
@@ -323,6 +281,10 @@ function dk_page($template_name) {
 function dk_cart()
 {
     do_action('dk_cart');
+    if (isset($_GET['add-to-cart'])) {
+      wp_redirect( dk_page('page-cart') );
+      exit;
+    }
     if (isset($_POST['update_cart'])) {
         foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
             if (isset($_POST[$cart_item['product_id']]) && $_POST[$cart_item['product_id']] > 0 && $_POST[$cart_item['product_id']] != $cart_item['quantity']) {
@@ -338,6 +300,32 @@ function dk_cart()
             }
         }
     }
+}
+
+/**
+ * @param $address
+ * @param $products
+ * @param $note
+ * @return WC_Order|WP_Error
+ * @throws WC_Data_Exception
+ */
+function dk_create_order($address, $products, $note) {
+  $order = wc_create_order();
+
+  $order->set_address($address, 'billing');
+  foreach ($products as $product) {
+      $order->add_product(wc_get_product($product['product_id']), $product['quantity']);
+  }
+  $order->set_customer_note($note);
+  $order->calculate_totals();
+  $order->update_status("Processing", 'Imported order', TRUE);
+  $order->set_payment_method_title('Tiền mặt khi nhận hàng');
+
+  foreach ($products as $cart_item_key => $cart_item) {
+      WC()->cart->remove_cart_item($cart_item_key);
+  }
+
+ return $order;
 }
 
 // archve.php

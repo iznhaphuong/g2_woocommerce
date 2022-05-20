@@ -1,6 +1,6 @@
 </div>
    <!--end container -->
-   <footer class="mt-100">
+   <footer>
        <?php mytheme_logo(); ?>
        <div class="copyright">
            &copy;<?php echo date('Y')?> - <?php bloginfo('sitename') ?>
